@@ -348,4 +348,33 @@
     <string name="pref_summary_enable_emojis">啟用支援軟體銀行 unicode 表情符號，共 471 個。</string>
     <string name="pref_title_pref_key_emojis_quick">表情符號快速鍵</string>
     <string name="pref_summary_pref_key_emojis_quick">於輸入文字區左側顯示表情符號快速鍵。</string>
+
+    <!-- CM9 MOD -->
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">簡訊模板</string>
+    <string name="pref_title_templates_manage">模板</string>
+    <string name="pref_summary_templates_manage">管理您的簡訊模板</string>
+    <string name="pref_title_templates_show_gesture">手勢</string>
+    <string name="pref_summary_templates_show_gesture">顯示手勢軌跡</string>
+    <string name="pref_title_template_gestures_sensitivity">手勢靈敏度</string>
+    <string name="template_save">儲存</string>
+    <string name="template_insert_hint">在這裡輸入模板文字</string>
+    <string name="template_empty_text">文字欄位不能留白</string>
+    <string name="template_explanation">輸入或修改模板文字並選擇性的畫一個手勢來與之關聯</string>
+    <string name="template_edit">編輯</string>
+    <string name="template_delete">刪除</string>
+    <string name="template_ctx_menu_title">管理模板</string>
+    <string name="template_list_title">模板</string>
+    <string name="template_edit_title">編輯模板</string>
+    <string name="template_new_title">新增模板</string>
+    <string name="template_insert">插入模板</string>
+    <string name="template_insert_ctx_menu_title">編輯文字</string>
+    <string name="template_gesture_draw">在以下空間畫出手勢</string>
+    <string name="template_not_present_error">您尚未定義任何模板</string>
+    <string name="template_not_present_error_title">錯誤</string>
+    <string name="template_select">選擇模板</string>
+    <string name="template_cancel_confirm_title">刪除確認</string>
+    <string name="template_cancel_confirm_text">您確定要刪除嗎？</string>
+    <string name="gestures_already_present">警告：一個相似的手勢經已關聯到另一個模板！</string>
 </resources>
+

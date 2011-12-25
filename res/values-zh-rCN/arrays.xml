@@ -64,4 +64,19 @@
     <item msgid="8479809115158836070">"Smirk"</item>
     <item msgid="638612939305162424">"一本正经"</item>
   </string-array>
+    <!-- CM9 Mod-->
+    <string-array name="pref_templates_gestures_sensitivity_entries">
+      <item>1 (宽松)</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+      <item>11</item>
+      <item>12 (严紧)</item>
+    </string-array>
 </resources>
