@@ -376,5 +376,15 @@
     <string name="template_cancel_confirm_title">刪除確認</string>
     <string name="template_cancel_confirm_text">您確定要刪除嗎？</string>
     <string name="gestures_already_present">警告：一個相似的手勢經已關聯到另一個模板！</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">震動設定</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">震動模式</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">變更震動模式</string>
+    <string name="pref_title_mms_notification_vibrate_call">通話時震動</string>
+    <string name="pref_summary_mms_notification_vibrate_call">允許在通話期間震動</string>
+    <string name="pref_title_mms_notification_vibrate_custom">自定震動模式</string>
+    <string name="pref_text_mms_notification_vibrate_custom">格式是以毫秒為單位的關閉／開啟時間長度：關閉，開啟，關閉，開啟，……</string>
+
 </resources>
 
