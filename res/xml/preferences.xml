@@ -131,22 +131,36 @@
                         android:summary="@string/pref_summary_hidemessage"
                         android:title="@string/pref_title_hidemessage" /> 
   </PreferenceCategory>
+
   <PreferenceCategory android:title="@string/pref_extra_settings">
+
     <CheckBoxPreference android:key="pref_key_strip_unicode"
                         android:title="@string/pref_title_strip_unicode"
                         android:summary="@string/pref_summary_strip_unicode"
                         android:disableDependentsState="true"
                         android:defaultValue="false" />
+
     <CheckBoxPreference android:key="pref_key_enable_emojis"
                         android:title="@string/pref_title_enable_emojis"
                         android:summary="@string/pref_summary_enable_emojis"
                         android:dependency="pref_key_strip_unicode"
                         android:defaultValue="false" />
+
     <CheckBoxPreference android:key="pref_key_emojis_quick"
                         android:title="@string/pref_title_pref_key_emojis_quick"
                         android:summary="@string/pref_summary_pref_key_emojis_quick"
                         android:dependency="pref_key_enable_emojis"
                         android:defaultValue="false" />
+
+    <CheckBoxPreference android:key="pref_key_sms_EnableMultipartSMS"
+                        android:title="@string/pref_title_sms_EnableMultipartSMS"
+                        android:summary="@string/pref_summary_sms_EnableMultipartSMS"
+                        android:defaultValue="true" />
+
+    <Preference android:key="pref_key_sms_SmsToMmsTextThreshold"
+                      android:dependency="pref_key_sms_EnableMultipartSMS"
+                      android:summary="@string/pref_summary_sms_SmsToMmsTextThreshold"
+                      android:title="@string/pref_title_sms_SmsToMmsTextThreshold" />
   </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/prefs_templates_settings" >

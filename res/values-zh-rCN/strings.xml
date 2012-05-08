@@ -389,5 +389,11 @@
     <string name="pref_title_mms_notification_vibrate_custom">自定义震动形式</string>
     <string name="pref_text_mms_notification_vibrate_custom">格式: 每毫秒/关, 开, 关, 开, ...</string>
 
+    <!-- SMS to MMS -->
+    <string name="pref_title_sms_EnableMultipartSMS">将短信转换成彩信</string>
+    <string name="pref_summary_sms_EnableMultipartSMS">"将短信信息转载为彩信"</string>
+    <string name="pref_title_sms_SmsToMmsTextThreshold">短信统计</string>
+    <string name="pref_summary_sms_SmsToMmsTextThreshold">"<xliff:g id="COUNT">%1$s</xliff:g>封转换之前的彩信信息"</string>
+
 </resources>
 

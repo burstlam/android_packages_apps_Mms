@@ -328,4 +328,9 @@
     <item quantity="other" msgid="7338580381574463136">"<xliff:g id="NUMBER">%1$s</xliff:g> Personen"</item>
   </plurals>
     <string name="disable_notifications_dialog_message" msgid="7644011234972074096">"Doppelte SMS-Benachrichtigungen der standardmäßigen SMS/MMS-App stoppen?"</string>
+    <string name="pref_title_template_gestures_sensitivity">Empfindlichkeit der Geste</string>
+    <string name="pref_title_sms_EnableMultipartSMS">"SMS zu MMS"</string>
+    <string name="pref_summary_sms_EnableMultipartSMS">"wandelt lange SMS-Nachricht in MMS um"</string>
+    <string name="pref_title_sms_SmsToMmsTextThreshold">"SMS Anzahl"</string>
+    <string name="pref_summary_sms_SmsToMmsTextThreshold">"<xliff:g id="COUNT">%1$s</xliff:g>SMS bevor in MMS umgewandelt wird"</string>
 </resources>

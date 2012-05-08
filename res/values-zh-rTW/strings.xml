@@ -386,5 +386,11 @@
     <string name="pref_title_mms_notification_vibrate_custom">自定震動模式</string>
     <string name="pref_text_mms_notification_vibrate_custom">格式是以毫秒為單位的關閉／開啟時間長度：關閉，開啟，關閉，開啟，……</string>
 
+    <!-- SMS to MMS -->
+    <string name="pref_title_sms_EnableMultipartSMS">SMS轉換MMS</string>
+    <string name="pref_summary_sms_EnableMultipartSMS">"將SMS信息轉載為MMS"</string>
+    <string name="pref_title_sms_SmsToMmsTextThreshold">SMS統計</string>
+    <string name="pref_summary_sms_SmsToMmsTextThreshold">"<xliff:g id="COUNT">%1$s</xliff:g> 封轉換之前的MMS信息"</string>
+
 </resources>
 
