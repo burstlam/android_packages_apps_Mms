@@ -395,5 +395,8 @@
     <string name="pref_title_sms_SmsToMmsTextThreshold">短信统计</string>
     <string name="pref_summary_sms_SmsToMmsTextThreshold">"<xliff:g id="COUNT">%1$s</xliff:g>封转换之前的彩信信息"</string>
 
+    <!-- Show Contact pictures when being notified -->
+    <string name="pref_title_notification_show_avatar">联络人头像</string>
+    <string name="pref_summary_notification_show_avatar">接收到通知时显示联络人头像</string>
 </resources>
 
