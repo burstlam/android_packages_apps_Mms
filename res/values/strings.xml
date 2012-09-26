@@ -883,6 +883,7 @@
     <string name="toast_sending_message">Sending message</string>
 
     <!-- QM - Quick reply -->
+<<<<<<< HEAD
     <string name="qm_quick_reply">Reply</string>
     <string name="qm_mark_read">Read</string>
 
@@ -1018,4 +1019,7 @@
     <string name="btn_ok">OK</string>
     <string name="btn_cancel">Cancel</string>
     <string name="select_all">All</string>
+
+    <!-- Add menu for 'Add SMS to calendar remind' -->
+    <string name="menu_add_to_calendar">Add to calendar</string>
 </resources>
