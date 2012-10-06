@@ -395,5 +395,8 @@
     <!-- Show Contact pictures when being notified -->
     <string name="pref_title_notification_show_avatar">聯絡人頭像</string>
     <string name="pref_summary_notification_show_avatar">接收到通知時顯示聯絡人頭像</string>
+
+    <string name="pref_title_mms_group_mms">群組短信</string>
+    <string name="pref_summary_mms_group_mms">支援收發群組短信</string>
 </resources>
 

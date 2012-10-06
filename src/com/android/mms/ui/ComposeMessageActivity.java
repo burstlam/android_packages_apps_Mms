@@ -725,7 +725,12 @@ public class ComposeMessageActivity extends Activity
             }
 
             mWorkingMessage.setWorkingRecipients(mRecipientsEditor.getNumbers());
-            mWorkingMessage.setHasEmail(mRecipientsEditor.containsEmail(), true);
+
+            if (recipientCount() > 1 && MessagingPreferenceActivity.getGroupMMSEnabled(ComposeMessageActivity.this)) {
+                mWorkingMessage.setGroupTextMms(recipientCount() > 1, true);
+            } else {
+                mWorkingMessage.setHasEmail(mRecipientsEditor.containsEmail(), true);
+            }
 
             checkForTooManyRecipients();
 

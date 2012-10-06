@@ -378,6 +378,11 @@
     <string name="hidden_sender">Someone</string>
     <string name="hidden_message_body">New Message</string>
 
+    <!-- Settings item for boolean option for group MMS sending/receiving -->
+    <string name="pref_title_mms_group_mms">Group messaging</string>
+    <!-- Settings item description for boolean group MMS sending/receiving -->
+    <string name="pref_summary_mms_group_mms">Enable group MMS sending and receiving</string>
+
     <!-- The vibrate notification modes -->
     <string-array name="prefEntries_vibrateWhen">
         <!-- Always -->
