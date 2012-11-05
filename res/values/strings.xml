@@ -927,4 +927,13 @@
     <string name="mms_breath_summary">Will give your sms notifications a breathing effect on the statusbar.</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+
+    <!-- **** LIQUID SMOOTH ADDITIONS START **** -->
+
+    <!-- Direct Call Feature -->
+    <string name="direct_call_title">Direct Call</string>
+    <string name="direct_call_summary">Picking up the phone calls the current contact</string>
+
+    <!-- **** LIQUID SMOOTH ADDITIONS END **** -->
+
 </resources>
