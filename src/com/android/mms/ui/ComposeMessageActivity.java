@@ -76,6 +76,10 @@ import android.gesture.GestureOverlayView;
 import android.gesture.GestureOverlayView.OnGesturePerformedListener;
 import android.gesture.Prediction;
 import android.graphics.drawable.Drawable;
+import android.hardware.SensorEventListener;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -207,7 +211,7 @@ import com.google.android.mms.pdu.SendReq;
  */
 public class ComposeMessageActivity extends Activity
         implements View.OnClickListener, TextView.OnEditorActionListener,
-        MessageStatusListener, Contact.UpdateListener, OnGesturePerformedListener,
+        MessageStatusListener, Contact.UpdateListener, OnGesturePerformedListener, SensorEventListener,
         LoaderManager.LoaderCallbacks<Cursor>  {
     public static final int REQUEST_CODE_ATTACH_IMAGE     = 100;
     public static final int REQUEST_CODE_TAKE_PICTURE     = 101;
@@ -406,6 +410,14 @@ public class ComposeMessageActivity extends Activity
     private SharedPreferences sp;
 
     private int inputMethod;
+
+    //Direct Call
+    private SensorManager mSensorManager;
+    private int SensorOrientationY;
+    private int SensorProximity;
+    private int oldProximity;
+    private boolean initProx;
+    private boolean proxChanged;
 
     @SuppressWarnings("unused")
     public static void log(String logMsg) {
@@ -2077,6 +2089,59 @@ public class ComposeMessageActivity extends Activity
         }
     }
 
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+
+    switch (event.sensor.getType()) {
+    case Sensor.TYPE_ORIENTATION:
+        SensorOrientationY = (int) event.values[SensorManager.DATA_Y];
+        break;
+    case Sensor.TYPE_PROXIMITY:
+        int currentProx = (int) event.values[0];
+        if (initProx) {
+            SensorProximity = currentProx;
+            initProx = false;
+        } else {
+            if( SensorProximity > 0 && currentProx == 0){
+                proxChanged = true;
+            }
+        }
+        SensorProximity = currentProx;
+        break;
+    }
+
+    if (rightOrientation(SensorOrientationY) && SensorProximity == 0 && proxChanged ) {
+        if (getRecipients().isEmpty() == false) {
+            // unregister Listener to don't let the onSesorChanged run the
+            // whole time
+            mSensorManager.unregisterListener(this, mSensorManager
+                    .getDefaultSensor(Sensor.TYPE_ORIENTATION));
+            mSensorManager.unregisterListener(this,
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY));
+
+            // get number and attach it to an Intent.ACTION_CALL, then start
+            // the Intent
+            String number = getRecipients().get(0).getNumber();
+            Intent dialIntent = new Intent(Intent.ACTION_CALL);
+            dialIntent.setData(Uri.fromParts("tel", number, null));
+            dialIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(dialIntent);
+        }
+    }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+    public boolean rightOrientation(int orientation) {
+    if (orientation < -50 && orientation > -130) {
+        return true;
+    } else {
+        return false;
+    }
+    }
+
     private void showSubjectEditor(boolean show) {
         if (Log.isLoggable(LogTag.APP, Log.VERBOSE)) {
             log("" + show);
@@ -2454,10 +2519,30 @@ public class ComposeMessageActivity extends Activity
             }
         }, 100);
 
+
+        try {
+        if(MessagingPreferenceActivity.getDirectCallEnabled(ComposeMessageActivity.this)) {
+            SensorOrientationY = 0;
+            SensorProximity = 0;
+            proxChanged = false;
+            initProx = true;
+            mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+            mSensorManager.registerListener(this,
+                        mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                        SensorManager.SENSOR_DELAY_UI);
+            mSensorManager.registerListener(this,
+                        mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY),
+                        SensorManager.SENSOR_DELAY_UI);
+        }
+    } catch (Exception e) {
+        Log.w("ERROR", e.toString());
+    }
+
         mIsRunning = true;
         updateThreadIdIfRunning();
         mConversation.markAsRead(true);
-        inputMethod = Integer.parseInt(sp.getString(MessagingPreferenceActivity.INPUT_TYPE, Integer.toString(InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE)));
+        inputMethod = Integer.parseInt(sp.getString(MessagingPreferenceActivity.INPUT_TYPE,
+                Integer.toString(InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE)));
         Log.d("MMS Input Type", Integer.toString(inputMethod));
         mTextEditor.setInputType(InputType.TYPE_CLASS_TEXT|
                                 inputMethod|
@@ -2483,6 +2568,16 @@ public class ComposeMessageActivity extends Activity
 
         removeRecipientsListeners();
 
+    try {
+        if(MessagingPreferenceActivity.getDirectCallEnabled(ComposeMessageActivity.this)) {
+            mSensorManager.unregisterListener(this,
+                        mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION));
+            mSensorManager.unregisterListener(this,
+                        mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY));
+        }
+    } catch (Exception e) {
+        Log.w("ERROR", e.toString());
+    }
         // remove any callback to display a progress spinner
         if (mAsyncDialog != null) {
             mAsyncDialog.clearPendingProgressDialog();
