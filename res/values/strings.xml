@@ -1013,4 +1013,9 @@
     <string name="mms_breath">Breathing SMS</string>
     <string name="mms_breath_summary">Will give your sms notifications a breathing effect on the statusbar.</string>
 
+    <!-- Gray hint displayed in the search field in Contacts when empty -->
+    <string name="search_bar_hint">Search contacts</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="select_all">All</string>
 </resources>

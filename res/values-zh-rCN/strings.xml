@@ -480,4 +480,10 @@
     <string name="pref_summary_sms_split_counter">在分割的消息中加入编号，例如：(1/2)</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+
+    <!-- Gray hint displayed in the search field in Contacts when empty -->
+    <string name="search_bar_hint">"搜索联系人"</string>
+    <string name="btn_ok">"确定"</string>
+    <string name="btn_cancel">"取消"</string>
+    <string name="select_all">"全选"</string>
 </resources>
