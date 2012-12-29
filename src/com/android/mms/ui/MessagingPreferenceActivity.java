@@ -116,8 +116,12 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     // Direct Call
     private static final String DIRECT_CALL_PREF = "direct_call_pref";
 
+    // Font Size
+    private static final String DIRECT_CALL_PREF         = "direct_call_pref";
+    public static final String MESSAGE_FONT_SIZE         = "pref_key_mms_message_font_size";
+
     // Menu entries
-    private static final int MENU_RESTORE_DEFAULTS    = 1;
+    private static final int MENU_RESTORE_DEFAULTS       = 1;
 
     private Preference mSmsLimitPref;
     private Preference mSmsDeliveryReportPref;
