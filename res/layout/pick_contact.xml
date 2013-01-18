@@ -88,6 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/btn_ok"
+	    android:enabled="false"
         />
 
         <Button android:id="@+id/btn_cancel"
