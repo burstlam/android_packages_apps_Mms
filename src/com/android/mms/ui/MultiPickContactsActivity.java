@@ -212,6 +212,7 @@ public class MultiPickContactsActivity extends ListActivity implements
             mSelectAllCheckBox.setChecked(false);
         }
         mOKButton.setText(getOKString());
+        mOKButton.setEnabled(mChoiceUris.size() == 0 ? false : true);
     }
 
     @Override
@@ -286,6 +287,7 @@ public class MultiPickContactsActivity extends ListActivity implements
             } else {
                 selectAll(false);
             }
+            mOKButton.setEnabled(mSelectAllCheckBox.isChecked());
             break;
         case R.id.search_field:
             enterSearchMode();
