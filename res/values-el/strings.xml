@@ -381,7 +381,6 @@
     <string name="gestures_already_present">Προσοχή: Μια παρόμοια κίνηση είναι συνδεδεμένη με ένα άλλο πρότυπο!</string>
 
     <!-- Change Vibrate pattern/method for message notification -->
-    <string name="pref_title_mms_notification_vibrate_settings">Ρυθμίσεις δόνησης</string>
     <string name="pref_title_mms_notification_vibrate_pattern">Μοτίβο δόνησης</string>
     <string name="pref_summary_mms_notification_vibrate_pattern">Αλλαγή μοτίβου δόνησης</string>
     <string name="pref_title_mms_notification_vibrate_call">Δόνηση κατά την κλήση</string>
@@ -409,7 +408,6 @@
 
     <!-- Settings item for the soft keyboard picker -->
     <string name="pref_title_input_type">Τύπος πληκτρολογίου</string>
-    <string name="pref_summary_input_type">Επιλέξτε τον τύπο πληκτρολογίου που θα χρησιμοποιείται κατά τη σύνταξη μηνυμάτων</string>
 
     <!-- Soft Keyboard Type -->
     <string name="pref_keyboard_emoji">Εμφάνιση πλήκτρου Emoticons</string>
@@ -446,4 +444,13 @@
 
     <!-- Add menu for 'Add SMS to calendar remind' -->
     <string name="menu_add_to_calendar">Προσθήκη στο ημερολόγιο</string>
+
+    <!-- Privacy mode -->
+    <string name="pref_title_notification_privacy_mode_enabled">Λειτουργία μυστικότητας</string>
+    <string name="pref_summary_notification_privacy_mode_enabled">Απόκρυψη αποστολέα και μηνύματος στην μπάρα κατάστασης και απενεργοποίηση Γρήγορης απάντησης</string>
+    <string name="notification_single_title_privacy_mode">Νέο μήνυμα</string>
+    <string name="notification_single_text_privacy_mode">1 μη αναγνωσμένο μήνυμα</string>
+    <string name="notification_multiple_title_privacy_mode">Νέα μηνύματα</string>
+    <string name="notification_multiple_text_privacy_mode"><xliff:g id="number" example="3">%1$s</xliff:g> μη αναγνωσμένα μηνύματα</string>
+    <string name="notification_ticker_privacy_mode">Νέο μήνυμα ελήφθη</string>
 </resources>
