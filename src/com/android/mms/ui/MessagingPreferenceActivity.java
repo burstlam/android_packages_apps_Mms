@@ -107,6 +107,9 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     private static final String DIRECT_CALL_PREF         = "direct_call_pref";
     public static final String MESSAGE_FONT_SIZE         = "pref_key_mms_message_font_size";
 
+    // Mms Breath
+    private static final String KEY_MMS_BREATH = "mms_breath";
+
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS       = 1;
 
@@ -125,6 +128,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     private CheckBoxPreference mEnableNotificationsPref;
     private CheckBoxPreference mEnablePrivacyModePref;
     private CheckBoxPreference mMmsAutoRetrievialPref;
+    private CheckBoxPreference mMMSBreath;
     private CheckBoxPreference mMmsRetrievalDuringRoamingPref;
     private RingtonePreference mRingtonePref;
     private Recycler mSmsRecycler;
@@ -199,6 +203,11 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mEnableQmLockscreenPref = (CheckBoxPreference) findPreference(QM_LOCKSCREEN_ENABLED);
         mEnableQmCloseAllPref = (CheckBoxPreference) findPreference(QM_CLOSE_ALL_ENABLED);
         mEnableQmDarkThemePref = (CheckBoxPreference) findPreference(QM_DARK_THEME_ENABLED);
+
+        // Mms Breath
+        mMMSBreath = (CheckBoxPreference) findPreference(KEY_MMS_BREATH);
+        mMMSBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.MMS_BREATH, 0) == 1);
 
         setMessagePreferences();
     }
@@ -506,8 +515,11 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         } else if (preference == mEnableQmDarkThemePref) {
             // Update the actual "enable dark theme" value that is stored in secure settings.
             enableQmDarkTheme(mEnableQmDarkThemePref.isChecked(), this);
-        }
 
+        } else if (preference == mMMSBreath) {
+            Settings.System.putInt(getContentResolver(), Settings.System.MMS_BREATH, 
+                    mMMSBreath.isChecked() ? 1 : 0);
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 

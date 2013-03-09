@@ -163,11 +163,12 @@
             android:title="@string/pref_title_notification_privacy_mode_enabled"
             android:summary="@string/pref_summary_notification_privacy_mode_enabled" />
 
-        <RingtonePreference android:key="pref_key_ringtone"
+       <RingtonePreference android:key="pref_key_ringtone"
             android:title="@string/pref_title_notification_ringtone"
             android:ringtoneType="notification"
             android:dependency="pref_key_enable_notifications"
             android:defaultValue="content://settings/system/notification_sound" />
+
 
         <CheckBoxPreference android:key="pref_key_vibrate"
             android:title="@string/pref_title_notification_vibrateWhen"
@@ -192,6 +193,12 @@
             android:defaultValue="true"
             android:title="@string/pref_title_mms_notification_vibrate_call"
             android:summary="@string/pref_summary_mms_notification_vibrate_call" />
+
+        <CheckBoxPreference
+            android:key="mms_breath"
+            android:title="@string/mms_breath"
+            android:summary="@string/mms_breath_summary"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
