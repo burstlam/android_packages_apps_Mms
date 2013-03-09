@@ -388,30 +388,6 @@
     <string name="pref_title_pref_key_emojis_quick">クイック絵文字ボタン</string>
     <string name="pref_summary_pref_key_emojis_quick">絵文字を素早く入力するためにテキスト入力エリアの左側に絵文字ボタンを配置する</string>
 
-    <!-- Quick Reply -->
-    <string name="quick_call_back">電話する</string>
-    <string name="quick_call_back_short">電話</string>
-    <string name="quick_reply_sms">返信する</string>
-    <string name="quick_reply_sms_short">返信</string>
-    <string name="quick_reply_delete">削除する</string>
-    <string name="quick_reply_delete_short">削除</string>
-    <string name="quick_reply_mark_read">既読にする</string>
-    <string name="quick_reply_mark_read_short">既読</string>
-    <string name="quick_reply_sending">送信しています</string>
-    <string name="qr_alert_title">送信されませんでした</string>
-    <string name="qr_alert_message">メッセージをキャンセルしますか？</string>
-    <string name="qr_alert_yes">はい</string>
-    <string name="qr_alert_no">いいえ</string>
-    <string name="qr_alert_read">既読にする</string>
-    <string name="qr_mark_read">既読にして閉じる</string>
-    <string name="qr_pick_smiley">顔文字を挿入</string>
-    <string name="qr_pick_emoji">絵文字を挿入</string>
-    <string name="qr_close_popup">閉じる</string>
-    <string name="qr_multi_ask">誰に返信しますか？</string>
-    <string name="quick_reply_hint">メッセージを入力</string>
-    <string name="only_three_please">3つまでしか選択できません</string>
-    <string name="pref_title_quick_reply">クイックリプライ</string>
-
     <!-- Send on Enter -->
     <string name="pref_title_mms_send_on_enter">Enterキーで送信</string>
     <string name="pref_summary_mms_send_on_enter">Enterキーの押下でメッセージを送信するかどうか切り替える</string>

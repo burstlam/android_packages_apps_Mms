@@ -73,7 +73,7 @@
     </string-array>
 
     <string-array name="pref_mms_user_agent_entries">
-        <item>Default Android</item>
+        <item>@string/default_android</item>
         <item>Nokia N95</item>
         <item>iPhone (3.0)</item>
         <item>BlackBerry 8800</item>

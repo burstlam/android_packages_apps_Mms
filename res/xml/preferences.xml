@@ -245,6 +245,14 @@
             android:summary="@string/pref_summary_mms_use_sent_timestamp"
             android:defaultValue="false" />
 
+        <EditTextPreference
+            android:key="pref_msg_signature"
+            android:title="@string/msg_sig_title"
+            android:summary="@string/msg_sig_summary"
+            android:dialogTitle="@string/msg_sig_title"
+            android:hint="@string/msg_sig_enter_text"
+            android:defaultValue="" />
+
         <ListPreference
             android:key="pref_key_mms_input_type"
             android:title="@string/pref_title_input_type"
