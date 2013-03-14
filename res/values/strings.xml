@@ -883,7 +883,6 @@
     <string name="toast_sending_message">Sending message</string>
 
     <!-- QM - Quick reply -->
-<<<<<<< HEAD
     <string name="qm_quick_reply">Reply</string>
     <string name="qm_mark_read">Read</string>
 

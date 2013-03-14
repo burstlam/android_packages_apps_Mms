@@ -487,6 +487,4 @@
     <string name="btn_cancel">"取消"</string>
     <string name="select_all">"全选"</string>
 
-    <!-- Add menu for 'Add SMS to calendar remind' -->
-    <string name="menu_add_to_calendar">添加日历提醒</string>
 </resources>
