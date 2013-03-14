@@ -1016,4 +1016,6 @@
 
     <!-- Add menu for 'Add SMS to calendar remind' -->
     <string name="menu_add_to_calendar">Add to calendar</string>
+
+    <string name="font_size_default">16dp (default)</string>
 </resources>

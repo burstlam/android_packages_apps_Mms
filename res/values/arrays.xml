@@ -188,7 +188,7 @@
         <item>10 dp</item>
         <item>12 dp</item>
         <item>14 dp</item>
-        <item>16 dp (default)</item>
+        <item>@string/font_size_default</item>
         <item>18 dp</item>
         <item>20 dp</item>
         <item>22 dp</item>
@@ -208,7 +208,7 @@
         <item>10 dp</item>
         <item>12 dp</item>
         <item>14 dp</item>
-        <item>16 dp (default)</item>
+        <item>@string/font_size_default</item>
         <item>18 dp</item>
         <item>20 dp</item>
         <item>22 dp</item>
