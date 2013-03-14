@@ -19,12 +19,12 @@
 -->
 <resources>
     <!-- Activity background color -->
-    <drawable name="class_zero_background">#7f000000</drawable>
+    <drawable name="class_zero_background">#ffd0d0d0</drawable>
 
     <!-- text color -->
     <drawable name="text_color_red">#ffff4444</drawable>
     <drawable name="text_color_black">#ff000000</drawable>
-    <color name="text_hairline">#ffcccccc</color>
+    <color name="text_hairline">#ffffffff</color>
     <color name="message_count_color">#76cfcfcf</color>
 
     <!-- Chat "sent time" text background -->
@@ -40,11 +40,11 @@
     <color name="widget_subject_text_color_unread">#ffcfcfcf</color>
 
     <!-- Color of the text for buttons in the action bar  -->
-    <color name="action_bar_button_text_color">#ffefefef</color>
+    <color name="action_bar_button_text_color">#ffffffff</color>
 
     <!-- New text colors from layouts to make theme chooser apk easier to theme -->
     <color name="compose_message_edit_text">#ffffffff</color>
-    <color name="actionbar_text">#ffdddddd</color>
+    <color name="actionbar_text">#ffffffff</color>
     <color name="delete_thread_dialog">#ffcccccc</color>
     <color name="delivery_report_header">#ffeeeeee</color>
     <color name="delivery_report_recipient">#ffffffff</color>
@@ -59,7 +59,7 @@
 
     <!-- New Background colors from layouts to make theme chooser apk easier to theme -->
     <color name="background">#ff000000</color>
-    <color name="darkgray_backgrounds">#ff111111</color>
+    <color name="darkgray_backgrounds">#ffc0c0c0</color>
     <color name="dividers">#ff202020</color>
     <color name="transparent">#00000000</color>
 

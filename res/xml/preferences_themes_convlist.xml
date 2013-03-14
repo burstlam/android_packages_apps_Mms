@@ -40,7 +40,7 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_conv_list_bg"
             android:title="@string/main_bg"
-            android:defaultValue="#00000000"
+            android:defaultValue="0x00000000"
             alphaSlider="true" />
 
     </PreferenceCategory>
@@ -53,42 +53,42 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_read_bg"
             android:title="@string/read_bg"
-            android:defaultValue="#00000000"
+            android:defaultValue="0x00000000"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_read_contact"
             android:title="@string/read_contact"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_read_subject"
             android:title="@string/read_subject"
-            android:defaultValue="#ffdfdfdf"
+            android:defaultValue="0xffdfdfdf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_read_date"
             android:title="@string/read_date"
-            android:defaultValue="#ffcfcfcf"
+            android:defaultValue="0xffcfcfcf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_read_count"
             android:title="@string/read_count"
-            android:defaultValue="#ffafafaf"
+            android:defaultValue="0xffafafaf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_read_smiley"
             android:title="@string/read_smiley"
-            android:defaultValue="#ff33b5e5"
+            android:defaultValue="0xff33b5e5"
             alphaSlider="true" />
 
     </PreferenceCategory>
@@ -101,42 +101,42 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_unread_bg"
             android:title="@string/unread_bg"
-            android:defaultValue="#00000000"
+            android:defaultValue="0x00000000"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_unread_contact"
             android:title="@string/unread_contact"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_unread_subject"
             android:title="@string/unread_subject"
-            android:defaultValue="#ffdfdfdf"
+            android:defaultValue="0xffdfdfdf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_unread_date"
             android:title="@string/unread_date"
-            android:defaultValue="#ffcfcfcf"
+            android:defaultValue="0xffcfcfcf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_unread_count"
             android:title="@string/unread_count"
-            android:defaultValue="#ffafafaf"
+            android:defaultValue="0xffafafaf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_unread_smiley"
             android:title="@string/unread_smiley"
-            android:defaultValue="#ff33b5e5"
+            android:defaultValue="0xff33b5e5"
             alphaSlider="true" />
 
     </PreferenceCategory>

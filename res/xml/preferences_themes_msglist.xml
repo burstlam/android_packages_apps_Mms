@@ -83,7 +83,7 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_message_bg"
             android:title="@string/main_bg"
-            android:defaultValue="#00000000"
+            android:defaultValue="0x00000000"
             alphaSlider="true" />
 
     </PreferenceCategory>
@@ -96,7 +96,7 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_recv_text_bg"
             android:title="@string/recv_text_bg"
-            android:defaultValue="#85afafaf"
+            android:defaultValue="0x85afafaf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
@@ -104,28 +104,28 @@
             android:key="pref_recv_contact_color"
             android:dependency="pref_use_contact"
             android:title="@string/recv_contact_color"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_recv_textcolor"
             android:title="@string/recv_textcolor"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_recv_date_color"
             android:title="@string/recv_datecolor"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_recv_smiley"
             android:title="@string/recv_smiley"
-            android:defaultValue="#ff33b5e5"
+            android:defaultValue="0xff33b5e5"
             alphaSlider="true" />
 
     </PreferenceCategory>
@@ -138,7 +138,7 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_sent_text_bg"
             android:title="@string/sent_text_bg"
-            android:defaultValue="#85afafaf"
+            android:defaultValue="0x85afafaf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
@@ -146,28 +146,28 @@
             android:key="pref_sent_contact_color"
             android:dependency="pref_use_contact"
             android:title="@string/sent_contact_color"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_sent_textcolor"
             android:title="@string/sent_textcolor"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_sent_date_color"
             android:title="@string/sent_datecolor"
-            android:defaultValue="#ffffffff"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_sent_smiley"
             android:title="@string/sent_smiley"
-            android:defaultValue="#ff33b5e5"
+            android:defaultValue="0xff33b5e5"
             alphaSlider="true" />
 
     </PreferenceCategory>

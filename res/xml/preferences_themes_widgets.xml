@@ -25,21 +25,21 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_senders_textcolor_read"
             android:title="@string/widget_senders_textcolor_read"
-            android:defaultValue="#ffefefef"
+            android:defaultValue="0xffefefef"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_subject_textcolor_read"
             android:title="@string/widget_subject_textcolor_read"
-            android:defaultValue="#ffcfcfcf"
+            android:defaultValue="0xffcfcfcf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_date_textcolor_read"
             android:title="@string/widget_date_textcolor_read"
-            android:defaultValue="#ffbfbfbf"
+            android:defaultValue="0xffbfbfbf"
             alphaSlider="true" />
 
     </PreferenceCategory>
@@ -59,21 +59,21 @@
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_senders_textcolor_unread"
             android:title="@string/widget_senders_textcolor_unread"
-            android:defaultValue="#ffefefef"
+            android:defaultValue="0xffefefef"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_subject_textcolor_unread"
             android:title="@string/widget_subject_textcolor_unread"
-            android:defaultValue="#ffcfcfcf"
+            android:defaultValue="0xffcfcfcf"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_date_textcolor_unread"
             android:title="@string/widget_date_textcolor_unread"
-            android:defaultValue="#ffbfbfbf"
+            android:defaultValue="0xffbfbfbf"
             alphaSlider="true" />
 
     </PreferenceCategory>
