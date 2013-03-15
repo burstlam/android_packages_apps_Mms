@@ -75,6 +75,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     public static final String AUTO_DELETE              = "pref_key_auto_delete";
     public static final String GROUP_MMS_MODE           = "pref_key_mms_group_mms";
     public static final String DIRECT_CALL              = "pref_key_mms_direct_call";
+    public static final String MESSAGE_FONT_SIZE        = "pref_key_mms_message_font_size";
 
     // Emoji and Unicode
     public static final String ENABLE_EMOJIS             = "pref_key_enable_emojis";
