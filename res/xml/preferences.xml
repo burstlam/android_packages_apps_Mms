@@ -236,5 +236,11 @@
             android:title="@string/pref_title_input_type"
             android:entries="@array/pref_entries_input_type"
             android:entryValues="@array/pref_values_input_type" />
+	    
+        <CheckBoxPreference
+            android:key="pref_key_mms_direct_call"
+            android:title="@string/direct_call_title"
+            android:summary="@string/direct_call_summary" 
+	    android:defaultValue="true" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -920,5 +920,7 @@
     <string name="btn_ok">OK</string>
     <string name="btn_cancel">Cancel</string>
     <string name="select_all">All</string>
+    <string name="direct_call_title">Direct Call</string>
+    <string name="direct_call_summary">Picking up the phone calls the current contact</string>
     <!-- **** MOKEE ADDITIONS END **** -->
 </resources>
