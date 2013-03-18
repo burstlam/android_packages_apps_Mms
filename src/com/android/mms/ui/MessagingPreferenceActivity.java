@@ -641,7 +641,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity
 
     public static boolean getDirectCallEnabled(Context context) {
 	    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-	    boolean directCallEnabled = prefs.getBoolean(MessagingPreferenceActivity.DIRECT_CALL,true);
+	    boolean directCallEnabled = prefs.getBoolean(MessagingPreferenceActivity.DIRECT_CALL,false);
 	    return directCallEnabled;
     }
     private void registerListeners() {
