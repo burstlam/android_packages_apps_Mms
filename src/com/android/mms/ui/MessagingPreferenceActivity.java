@@ -66,8 +66,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     public static final String PRIORITY                 = "pref_key_mms_priority";
     public static final String READ_REPORT_MODE         = "pref_key_mms_read_reports";
     public static final String SMS_DELIVERY_REPORT_MODE = "pref_key_sms_delivery_reports";
-    public static final String SMS_SPLIT_MESSAGE        = "pref_key_sms_split_160";
-    public static final String SMS_SPLIT_COUNTER        = "pref_key_sms_split_counter";
     public static final String NOTIFICATION_ENABLED     = "pref_key_enable_notifications";
     public static final String NOTIFICATION_VIBRATE     = "pref_key_vibrate";
     public static final String NOTIFICATION_VIBRATE_WHEN= "pref_key_vibrateWhen";
@@ -77,20 +75,32 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     public static final String AUTO_DELETE              = "pref_key_auto_delete";
     public static final String GROUP_MMS_MODE           = "pref_key_mms_group_mms";
     public static final String MMS_SAVE_LOCATION        = "pref_save_location";
-
-    // Templates
-    public static final String MANAGE_TEMPLATES         = "pref_key_templates_manage";
-    public static final String SHOW_GESTURE             = "pref_key_templates_show_gesture";
-    public static final String GESTURE_SENSITIVITY      = "pref_key_templates_gestures_sensitivity";
-    public static final String GESTURE_SENSITIVITY_VALUE= "pref_key_templates_gestures_sensitivity_value";
-    public static final String STRIP_UNICODE            = "pref_key_strip_unicode";
-    public static final String ENABLE_EMOJIS            = "pref_key_enable_emojis";
     public static final String ENABLE_QUICK_SMILEY_BTN  = "pref_key_quick_smiley_btn";
     public static final String FULL_TIMESTAMP           = "pref_key_mms_full_timestamp";
     public static final String SENT_TIMESTAMP           = "pref_key_mms_use_sent_timestamp";
     public static final String NOTIFICATION_VIBRATE_PATTERN = "pref_key_mms_notification_vibrate_pattern";
     public static final String NOTIFICATION_VIBRATE_PATTERN_CUSTOM = "pref_key_mms_notification_vibrate_pattern_custom";
     public static final String NOTIFICATION_VIBRATE_CALL ="pre_key_mms_notification_vibrate_call";
+
+    // Emoji
+    public static final String ENABLE_EMOJIS             = "pref_key_enable_emojis";
+
+    // Unicode
+    public static final String UNICODE_STRIPPING            = "pref_key_unicode_stripping";
+    public static final String UNICODE_STRIPPING_VALUE      = "pref_key_unicode_stripping_value";
+    public static final int UNICODE_STRIPPING_LEAVE_INTACT  = 0;
+    public static final int UNICODE_STRIPPING_NON_DECODABLE = 1;
+    public static final int UNICODE_STRIPPING_ALL           = 2;
+
+    // Split sms
+    public static final String SMS_SPLIT_MESSAGE        = "pref_key_sms_split_160";
+    public static final String SMS_SPLIT_COUNTER        = "pref_key_sms_split_counter";
+
+    // Templates
+    public static final String MANAGE_TEMPLATES         = "pref_key_templates_manage";
+    public static final String SHOW_GESTURE             = "pref_key_templates_show_gesture";
+    public static final String GESTURE_SENSITIVITY      = "pref_key_templates_gestures_sensitivity";
+    public static final String GESTURE_SENSITIVITY_VALUE= "pref_key_templates_gestures_sensitivity_value";
 
     // Privacy mode
     public static final String PRIVACY_MODE_ENABLED = "pref_key_enable_privacy_mode";
@@ -134,6 +144,8 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     private Recycler mMmsRecycler;
     private Preference mManageTemplate;
     private ListPreference mGestureSensitivity;
+    private ListPreference mUnicodeStripping;
+    private CharSequence[] mUnicodeStrippingEntries;
     private static final int CONFIRM_CLEAR_SEARCH_HISTORY_DIALOG = 3;
 
     // QuickMessage
@@ -183,6 +195,8 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mRingtonePref = (RingtonePreference) findPreference(NOTIFICATION_RINGTONE);
         mManageTemplate = findPreference(MANAGE_TEMPLATES);
         mGestureSensitivity = (ListPreference) findPreference(GESTURE_SENSITIVITY);
+        mUnicodeStripping = (ListPreference) findPreference(UNICODE_STRIPPING);
+        mUnicodeStrippingEntries = getResources().getTextArray(R.array.pref_unicode_stripping_entries);
 
         mEnableMultipartSMS = (CheckBoxPreference)findPreference("pref_key_sms_EnableMultipartSMS");
         mSmsToMmsTextThreshold = findPreference("pref_key_sms_SmsToMmsTextThreshold");
@@ -323,6 +337,19 @@ public class MessagingPreferenceActivity extends PreferenceActivity
                 int value = Integer.parseInt((String) newValue);
                 sharedPreferences.edit().putInt(GESTURE_SENSITIVITY_VALUE, value).commit();
                 mGestureSensitivity.setSummary(String.valueOf(value));
+                return true;
+            }
+        });
+
+        int unicodeStripping = sharedPreferences.getInt(UNICODE_STRIPPING_VALUE, 0);
+        mUnicodeStripping.setValue(String.valueOf(unicodeStripping));
+        mUnicodeStripping.setSummary(mUnicodeStrippingEntries[unicodeStripping]);
+        mUnicodeStripping.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                int value = Integer.parseInt((String) newValue);
+                sharedPreferences.edit().putInt(UNICODE_STRIPPING_VALUE, value).commit();
+                mUnicodeStripping.setSummary(mUnicodeStrippingEntries[value]);
                 return true;
             }
         });
