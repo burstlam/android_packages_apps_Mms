@@ -480,6 +480,8 @@
     <string name="pref_summary_sms_split_counter">在分割的消息中加入编号，例如：(1/2)</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    
+    <!-- **** MOKEE ADDITIONS START **** -->
     <!-- Gray hint displayed in the search field in Contacts when empty -->
     <string name="search_bar_hint">"搜索联系人"</string>
     <string name="btn_ok">"确定"</string>
@@ -494,7 +496,5 @@
     <string name="pref_title_mms_message_font_size">消息字体大小</string>
     <string name="pref_summary_mms_message_font_size">更改消息视图中的字体大小</string>
     <string name="pref_dialogtitle_mms_message_font_size">选择字体大小</string>
-
-    <!-- Message Unread Count -->
-    <string name="unread_conv_count">（%1$s）</string>
+    <!-- **** MOKEE ADDITIONS END **** -->
 </resources>

@@ -108,6 +108,7 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
     private SharedPreferences mPrefs;
     private Handler mHandler;
     private boolean mDoOnceAfterFirstQuery;
+    private TextView mUnreadConvCount;
     private MenuItem mSearchItem;
     private SearchView mSearchView;
     private int mSavedFirstVisiblePosition = AdapterView.INVALID_POSITION;
@@ -137,6 +138,8 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
         listView.setEmptyView(findViewById(R.id.empty));
 
         initListAdapter();
+
+        setupActionBar();
 
         setTitle(R.string.app_label);
 
@@ -178,6 +181,21 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
         View firstChild = listView.getChildAt(0);
         mSavedFirstItemOffset = (firstChild == null) ? 0 : firstChild.getTop();
         mIsRunning = false;
+    }
+
+    private void setupActionBar() {
+        ActionBar actionBar = getActionBar();
+
+        ViewGroup v = (ViewGroup)LayoutInflater.from(this)
+            .inflate(R.layout.conversation_list_actionbar, null);
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM,
+                ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(v,
+                new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT,
+                        ActionBar.LayoutParams.WRAP_CONTENT,
+                        Gravity.CENTER_VERTICAL | Gravity.RIGHT));
+
+        mUnreadConvCount = (TextView)v.findViewById(R.id.unread_conv_count);
     }
 
     private final ConversationListAdapter.OnContentChangedListener mContentChangedListener =
@@ -797,8 +815,7 @@ public class ConversationList extends ListActivity implements DraftCache.OnDraft
                     count = cursor.getCount();
                     cursor.close();
                 }
-                String unread_Conv_Count = count > 0 ? String.format(getString(R.string.unread_conv_count),Integer.toString(count)) : "";
-                setTitle(getString(R.string.app_label)+unread_Conv_Count);
+                mUnreadConvCount.setText(count > 0 ? Integer.toString(count) : null);
                 break;
 
             case HAVE_LOCKED_MESSAGES_TOKEN:
