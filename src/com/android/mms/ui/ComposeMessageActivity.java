@@ -50,6 +50,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.LoaderManager;
 import android.app.ProgressDialog;
+import android.app.Service;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ClipData;
@@ -131,6 +132,7 @@ import android.text.TextWatcher;
 import android.text.method.TextKeyListener;
 import android.text.style.URLSpan;
 import android.text.util.Linkify;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -2567,7 +2569,8 @@ public class ComposeMessageActivity extends Activity
 
 
         try {
-        if(MessagingPreferenceActivity.getDirectCallEnabled(ComposeMessageActivity.this)) {
+            TelephonyManager tm = (TelephonyManager)getSystemService(Service.TELEPHONY_SERVICE);
+            if(MessagingPreferenceActivity.getDirectCallEnabled(ComposeMessageActivity.this) && tm.getCallState() == TelephonyManager.CALL_STATE_IDLE) {
             SensorOrientationY = 0;
             SensorProximity = 0;
             proxChanged = false;
