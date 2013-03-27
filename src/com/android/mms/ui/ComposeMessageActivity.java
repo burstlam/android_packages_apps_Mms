@@ -2117,7 +2117,7 @@ public class ComposeMessageActivity extends Activity
 			    SensorProximity = currentProx;
 			    initProx = false;
 			} else {
-			    if( SensorProximity > 0 && currentProx == 0){
+			    if( SensorProximity > 0 && currentProx <= 3){
 			        proxChanged = true;
 			    }
 			}
@@ -2125,7 +2125,7 @@ public class ComposeMessageActivity extends Activity
 			break;
 	        }
 
-	    if (rightOrientation(SensorOrientationY) && SensorProximity == 0 && proxChanged ) {
+	    if (rightOrientation(SensorOrientationY) && SensorProximity <= 3 && proxChanged ) {
 	        if (getRecipients().isEmpty() == false) {
 	            // unregister Listener to don't let the onSesorChanged run the
 	            // whole time
