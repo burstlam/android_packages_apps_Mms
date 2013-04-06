@@ -266,19 +266,19 @@ public class ConversationListItem extends RelativeLayout implements Contact.Upda
             setBackground(background);
         } else if (mConversation.hasUnreadMessages()) {
             setBackgroundColor(sp.getInt(Constants.PREF_UNREAD_BG, 0xd7bbe6f5));
-            mFromView.setTextColor(sp.getInt(Constants.PREF_UNREAD_CONTACT, 0xff000000));
+            mFromView.setTextColor(sp.getInt(Constants.PREF_UNREAD_CONTACT, 0xff5a00ff));
             mFromView.setTextSize(contactFontSize);
-            mSubjectView.setTextColor(sp.getInt(Constants.PREF_UNREAD_SUBJECT, 0xff585858));
+            mSubjectView.setTextColor(sp.getInt(Constants.PREF_UNREAD_SUBJECT, 0xffff0000));
             mSubjectView.setTextSize(textFontSize);
-            mDateView.setTextColor(sp.getInt(Constants.PREF_UNREAD_DATE, 0xffcfcfcf));
+            mDateView.setTextColor(sp.getInt(Constants.PREF_UNREAD_DATE, 0xffff0000));
             mDateView.setTextSize(dateFontSize);
         } else {
             setBackgroundColor(sp.getInt(Constants.PREF_READ_BG, 0xd4c1f1ac));
-            mFromView.setTextColor(sp.getInt(Constants.PREF_READ_CONTACT, 0xff000000));
+            mFromView.setTextColor(sp.getInt(Constants.PREF_READ_CONTACT, 0xff5a00ff));
             mFromView.setTextSize(contactFontSize);
-            mSubjectView.setTextColor(sp.getInt(Constants.PREF_READ_SUBJECT, 0xff585858));
+            mSubjectView.setTextColor(sp.getInt(Constants.PREF_READ_SUBJECT, 0xffff0000));
             mSubjectView.setTextSize(textFontSize);
-            mDateView.setTextColor(sp.getInt(Constants.PREF_READ_DATE, 0xffcfcfcf));
+            mDateView.setTextColor(sp.getInt(Constants.PREF_READ_DATE, 0xffff0000));
             mDateView.setTextSize(dateFontSize);
         }
     }

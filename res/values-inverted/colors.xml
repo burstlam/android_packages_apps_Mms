@@ -18,33 +18,33 @@
  */
 -->
 <resources>
-    <color name="text_hairline">#ffcccccc</color>
-    <color name="message_count_color">#76cfcfcf</color>
+    <color name="text_hairline">#ffffffff</color>
+    <color name="message_count_color">#ffffff00</color>
     <color name="timestamp_color">#7cefefef</color>
-    <color name="unread_bgcolor">#655e5e5e</color>
-    <color name="read_bgcolor">#55000000</color>
-    <color name="widget_sender_text_color_read">#ffdfdfdf</color>
-    <color name="widget_sender_text_color_unread">#ffefefef</color>
-    <color name="widget_subject_text_color_read">#ffbfbfbf</color>
-    <color name="widget_subject_text_color_unread">#ffcfcfcf</color>
-    <color name="action_bar_button_text_color">#ffffffff</color>
+    <color name="unread_bgcolor">#d7bbe6f5</color>
+    <color name="read_bgcolor">#d3c1f1ac</color>
+    <color name="widget_sender_text_color_read">#ff00ff00</color>
+    <color name="widget_sender_text_color_unread">#ffffffff</color>
+    <color name="widget_subject_text_color_read">#ff00ff00</color>
+    <color name="widget_subject_text_color_unread">#ffffffff</color>
+    <color name="action_bar_button_text_color">#ff33b5e5</color>
     <color name="compose_message_edit_text">#ffffffff</color>
-    <color name="compose_message_text_counter">#ffffffff</color>
-    <color name="actionbar_text">#ffdddddd</color>
+    <color name="compose_message_text_counter">#ffffff00</color>
+    <color name="actionbar_text">#ffffffff</color>
     <color name="delete_thread_dialog">#ffcccccc</color>
     <color name="delivery_report_header">#ffeeeeee</color>
     <color name="delivery_report_recipient">#ffffffff</color>
     <color name="delivery_report_status">#ffcccccc</color>
     <color name="delivery_report_date">#ffcccccc</color>
     <color name="button_text">#ffffffff</color>
-    <color name="message_received">#ff33b5e5</color>
+    <color name="message_received">#ffffffff</color>
     <color name="message_sent">#ffffffff</color>
-    <color name="widget_unread_text">#ffdddddd</color>
+    <color name="widget_unread_text">#ffffffff</color>
     <color name="widget_loading">#ffffffff</color>
     <color name="background">#ff000000</color>
     <color name="darkgray_backgrounds">#ff111111</color>
     <color name="quickmessage_body_dark_bg">#ff000000</color>
     <color name="quickmessage_body_light_bg">#fff3f3f3</color>
-    <color name="dividers">#ffeeeeee</color>
+    <color name="dividers">#ff33b5e5</color>
     <color name="transparent">#00000000</color>
 </resources>
