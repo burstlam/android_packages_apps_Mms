@@ -44,6 +44,7 @@ import android.provider.Telephony.Sms;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.TelephonyManager;
 import android.text.Html;
+import android.text.Spanned;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -79,6 +80,7 @@ import com.android.mms.model.SlideModel;
 import com.android.mms.model.SlideshowModel;
 import com.android.mms.themes.Constants;
 import com.android.mms.themes.Preferences;
+import com.android.mms.transaction.SmsReceiverService;
 import com.android.mms.transaction.Transaction;
 import com.android.mms.transaction.TransactionBundle;
 import com.android.mms.transaction.TransactionService;
@@ -539,9 +541,16 @@ public class MessageListItem extends LinearLayout implements
         // If we're in the process of sending a message (i.e. pending), then we show a "SENDING..."
         // string in place of the timestamp.
         if (!sameItem || haveLoadedPdu) {
-            mDateView.setText(buildTimestampLine(mMessageItem.isSending() ?
-                    mContext.getResources().getString(R.string.sending_message) :
+            if (MessagingPreferenceActivity.getDelaySendMessageEnabled(mContext)
+                    && mMessageItem.getCountDown() > 0) {
+                mDateView.setText(buildTimestampLine(mMessageItem.isSending() ?
+                        mContext.getResources().getString(R.string.sent_countdown) :
                         mMessageItem.mTimestamp));
+            } else {
+                mDateView.setText(buildTimestampLine(mMessageItem.isSending() ?
+                        mContext.getResources().getString(R.string.sending_message) :
+                        mMessageItem.mTimestamp));
+            }
         }
 
         // Set date and background colors
@@ -858,6 +867,12 @@ public class MessageListItem extends LinearLayout implements
     }
 
     public void onMessageListItemClick() {
+        if (mMessageItem != null && mMessageItem.isSending() && mMessageItem.isSms()) {
+            if (mMessageItem.mMessageUri.equals(SmsReceiverService.mCurrentSendingUri)) {
+                SmsReceiverService.cancelSendingMessage();
+                return;
+            }
+        }
         // If the message is a failed one, clicking it should reload it in the compose view,
         // regardless of whether it has links in it
         if (mMessageItem != null &&
@@ -1087,5 +1102,19 @@ public class MessageListItem extends LinearLayout implements
     public void seekVideo(int seekTo) {
         // TODO Auto-generated method stub
 
+    }
+
+    public void updateDelayCountDown() {
+        if (mMessageItem.isSms() && mMessageItem.getCountDown() > 0 && mMessageItem.isSending()) {
+            String content = String.format(mContext.getResources()
+                    .getString(R.string.remaining_delay_time), mMessageItem.getCountDown());
+            content = buildTimestampLine(content);
+            Spanned spanned = Html.fromHtml(content);
+            mDateView.setText(spanned);
+        } else {
+            mDateView.setText(buildTimestampLine(mMessageItem.isSending() ?
+                    mContext.getResources().getString(R.string.sending_message) :
+                    mMessageItem.mTimestamp));
+        }
     }
 }
