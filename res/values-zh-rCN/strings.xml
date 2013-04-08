@@ -450,10 +450,20 @@
 
     <string name="pref_extra_settings">其他设置</string>
 
+    <!-- Strip unicode -->
+    <string name="pref_title_unicode_stripping">去除统一码</string>
+    <string name="pref_unicode_stripping_leave_intact">只保留完整的字符</string>
+    <string name="pref_unicode_stripping_non_encodable">去除未编码的字符</string>
+    <string name="pref_unicode_stripping_all">去除所有统一码字符</string>
+
     <!-- Enable emojis -->
     <string name="pref_title_enable_emojis">绘文字支持</string>
     <string name="pref_summary_enable_emojis">开启绘文字 (一套471个视觉情感符号) 的支持</string>
     <string name="menu_insert_emoji">插入绘文字</string>
+    
+    <!-- Enable SoftBank emoji encoding -->
+    <string name="pref_title_enable_softbank_encoding">SoftBank编码</string>
+    <string name="pref_summary_enable_softbank_encoding">使用SoftBank编码的绘文字</string>
 
     <!-- Full timestamps -->
     <string name="pref_title_mms_full_timestamp">完整时间戳</string>
