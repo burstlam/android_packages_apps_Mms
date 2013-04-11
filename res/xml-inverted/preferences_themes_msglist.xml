@@ -104,14 +104,14 @@
             android:key="pref_recv_contact_color"
             android:dependency="pref_use_contact"
             android:title="@string/recv_contact_color"
-            android:defaultValue="0xff000000"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_recv_textcolor"
             android:title="@string/recv_textcolor"
-            android:defaultValue="0xff585858"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
@@ -146,14 +146,14 @@
             android:key="pref_sent_contact_color"
             android:dependency="pref_use_contact"
             android:title="@string/sent_contact_color"
-            android:defaultValue="0xff000000"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
             android:layout="?android:attr/preferenceLayoutChild"
             android:key="pref_sent_textcolor"
             android:title="@string/sent_textcolor"
-            android:defaultValue="0xff585858"
+            android:defaultValue="0xffffffff"
             alphaSlider="true" />
 
         <com.android.mms.ui.ColorPickerPreference
