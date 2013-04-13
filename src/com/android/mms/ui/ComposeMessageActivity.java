@@ -257,7 +257,6 @@ public class ComposeMessageActivity extends Activity
     private static final int MENU_SAVE_RINGTONE         = 30;
     private static final int MENU_PREFERENCES           = 31;
     private static final int MENU_GROUP_PARTICIPANTS    = 32;
-    private static final int MENU_INSERT_EMOJI          = 33;
     private static final int MENU_ADD_TEMPLATE          = 34;
 
     private static final int DIALOG_TEMPLATE_SELECT     = 1;
@@ -2978,10 +2977,6 @@ public class ComposeMessageActivity extends Activity
                     R.drawable.ic_menu_emoticons);
             SharedPreferences prefs = PreferenceManager
                     .getDefaultSharedPreferences((Context) ComposeMessageActivity.this);
-            boolean enableEmojis = prefs.getBoolean(MessagingPreferenceActivity.ENABLE_EMOJIS, false);
-            if (enableEmojis) {
-                menu.add(0, MENU_INSERT_EMOJI, 0, R.string.menu_insert_emoji);
-            }
         }
 
         menu.add(0, MENU_INSERT_CONTACT_INFO, 0, R.string.menu_insert_contact_info)
@@ -3078,9 +3073,6 @@ public class ComposeMessageActivity extends Activity
                 break;
             case MENU_INSERT_SMILEY:
                 showSmileyDialog();
-                break;
-            case MENU_INSERT_EMOJI:
-                showEmojiDialog();
                 break;
             case MENU_INSERT_CONTACT_INFO:
                 Intent intentInsertContactInfo = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
@@ -3678,12 +3670,13 @@ public class ComposeMessageActivity extends Activity
 
         CharSequence text = mWorkingMessage.getText();
 
+        SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences((Context) ComposeMessageActivity.this);
+        boolean enableEmojis = prefs.getBoolean(MessagingPreferenceActivity.ENABLE_EMOJIS, false);
+
         // TextView.setTextKeepState() doesn't like null input.
         if (text != null) {
             // Restore the emojis if necessary
-            SharedPreferences prefs = PreferenceManager
-                    .getDefaultSharedPreferences((Context) ComposeMessageActivity.this);
-            boolean enableEmojis = prefs.getBoolean(MessagingPreferenceActivity.ENABLE_EMOJIS, false);
             if (enableEmojis) {
                 mTextEditor.setTextKeepState(EmojiParser.getInstance().addEmojiSpans(text));
             } else {
@@ -3693,6 +3686,16 @@ public class ComposeMessageActivity extends Activity
             mTextEditor.setSelection(mTextEditor.length());
         } else {
             mTextEditor.setText("");
+        }
+        if (enableEmojis) {
+            ImageButton quickEmojis = (ImageButton) mBottomPanel.findViewById(R.id.quick_emoji_button);
+            quickEmojis.setVisibility(View.VISIBLE);
+            quickEmojis.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showEmojiDialog();
+                }
+            });
         }
     }
 
