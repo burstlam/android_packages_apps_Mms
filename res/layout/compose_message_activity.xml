@@ -127,6 +127,15 @@
                 android:layout_height="wrap_content"
                 android:background="@color/background" >
 
+                <ImageButton
+                    android:id="@+id/quick_emoji_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:src="@drawable/emoji_btn"
+                    android:layout_gravity="bottom"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
                 <EditText
                     android:textColor="@color/compose_message_edit_text"
                     android:id="@+id/embedded_text_editor"
@@ -134,7 +143,6 @@
                     android:layout_gravity="bottom"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
-                    android:layout_marginLeft="8dip"
                     android:autoText="true"
                     android:textSize="16sp"
                     android:capitalize="sentences"
