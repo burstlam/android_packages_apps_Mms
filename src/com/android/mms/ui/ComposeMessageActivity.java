@@ -2547,6 +2547,9 @@ public class ComposeMessageActivity extends Activity
     protected void onResume() {
         super.onResume();
 
+        // Init settings
+        initResourceRefs();
+
         // OLD: get notified of presence updates to update the titlebar.
         // NEW: we are using ContactHeaderWidget which displays presence, but updating presence
         //      there is out of our control.
@@ -3912,6 +3915,8 @@ public class ComposeMessageActivity extends Activity
         mTextEditor = (EditText) findViewById(R.id.embedded_text_editor);
         mTextEditor.setOnEditorActionListener(this);
         mTextEditor.addTextChangedListener(mTextEditorWatcher);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mTextEditor.setMaxLines(prefs.getInt(MessagingPreferenceActivity.TEXT_AREA_SIZE, 3));
         mTextEditor.setFilters(new InputFilter[] {
                 new LengthFilter(MmsConfig.getMaxTextLimit())});
         mTextCounter = (TextView) findViewById(R.id.text_counter);

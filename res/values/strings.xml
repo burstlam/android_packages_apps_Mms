@@ -1081,4 +1081,8 @@ phone number; used in several settings-related dialogs -->
     <string name="ok">OK</string>
 
     <string name="selectContact">select contact</string>
+
+    <!-- Text area -->
+    <string name="pref_text_area_size_title">Text area size</string>
+    <string name="pref_text_area_size_summary">Set text area to <xliff:g id="lines">%1$s</xliff:g> lines</string>
 </resources>
