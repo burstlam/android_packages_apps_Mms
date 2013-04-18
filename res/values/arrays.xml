@@ -257,6 +257,5 @@
         <item>@string/delay_send_duration_options_entry_6</item>
         <item>@string/delay_send_duration_options_entry_7</item>
         <item>@string/delay_send_duration_options_entry_8</item>
-        <item>10 seconds</item>
     </string-array>
 </resources>
