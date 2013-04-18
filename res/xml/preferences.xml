@@ -20,6 +20,19 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Blacklist settings -->
+    <PreferenceCategory android:title="@string/blacklist_title">
+        <PreferenceScreen
+            android:key="button_blacklist"
+            android:title="@string/blacklist_title"
+            android:persistent="false">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.mms"
+                android:targetClass="com.android.mms.BlacklistSetting" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:title="@string/mms_themes"
         android:key="pref_mms_themes">

@@ -108,6 +108,9 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     // Keyboard input type
     public static final String INPUT_TYPE                = "pref_key_mms_input_type";
 
+    // Blacklist
+    public static final String BUTTON_BLACKLIST  = "button_blacklist";
+
     // QuickMessage
     public static final String QUICKMESSAGE_ENABLED      = "pref_key_quickmessage";
     public static final String QM_LOCKSCREEN_ENABLED     = "pref_key_qm_lockscreen";
@@ -161,6 +164,9 @@ public class MessagingPreferenceActivity extends PreferenceActivity
 
     private CheckBoxPreference mDirectCall;
 
+    // Blacklist
+    private PreferenceScreen mButtonBlacklist;
+
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -179,6 +185,18 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         // we have to reload it whenever we resume.
         setEnabledNotificationsPref();
         registerListeners();
+        updateBlacklistSummary();
+    }
+
+    private void updateBlacklistSummary() {
+        if (mButtonBlacklist != null) {
+            if (PreferenceManager.getDefaultSharedPreferences(this).
+                    getBoolean("button_enable_blacklist", false)) {
+                mButtonBlacklist.setSummary(R.string.blacklist_summary);
+            } else {
+                mButtonBlacklist.setSummary(R.string.blacklist_summary_disabled);
+            }
+        }
     }
 
     private void loadPrefs() {
@@ -221,6 +239,9 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mEnableQmLockscreenPref = (CheckBoxPreference) findPreference(QM_LOCKSCREEN_ENABLED);
         mEnableQmCloseAllPref = (CheckBoxPreference) findPreference(QM_CLOSE_ALL_ENABLED);
         mEnableQmDarkThemePref = (CheckBoxPreference) findPreference(QM_DARK_THEME_ENABLED);
+
+        // Blacklist
+        mButtonBlacklist = (PreferenceScreen) findPreference(BUTTON_BLACKLIST);
 
         // Mms Breath
         mMMSBreath = (CheckBoxPreference) findPreference(KEY_MMS_BREATH);
