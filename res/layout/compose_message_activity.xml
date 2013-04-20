@@ -128,13 +128,16 @@
                 android:background="@color/background" >
 
                 <ImageButton
-                    android:id="@+id/quick_emoji_button"
+                    android:id="@+id/quick_emoji_button_mms"
                     style="?android:attr/borderlessButtonStyle"
                     android:src="@drawable/emoji_btn"
                     android:layout_gravity="bottom"
-                    android:layout_width="48dp"
+                    android:layout_width="40dip"
                     android:layout_height="wrap_content"
-                    android:visibility="gone" />
+                    android:paddingLeft="12dip"
+                    android:paddingRight="12dip"
+                    android:visibility="gone"
+                />
 
                 <EditText
                     android:textColor="@color/compose_message_edit_text"
@@ -143,6 +146,7 @@
                     android:layout_gravity="bottom"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
+                    android:layout_marginLeft="8dip"
                     android:autoText="true"
                     android:textSize="16sp"
                     android:capitalize="sentences"
