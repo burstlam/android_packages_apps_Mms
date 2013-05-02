@@ -40,6 +40,7 @@
         android:layout_marginLeft="10dip"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/avatar"
+        android:layout_toLeftOf="@+id/location"
         android:layout_alignWithParentIfMissing="true"
         android:ellipsize="marquee"  />
     
