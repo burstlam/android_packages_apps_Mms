@@ -404,7 +404,7 @@ public class MessageUtils {
     }
 
     public static int getAttachmentType(SlideshowModel model, MultimediaMessagePdu mmp) {
-        if (model == null) {
+        if (model == null || mmp == null) {
             return MessageItem.ATTACHMENT_TYPE_NOT_LOADED;
         }
 
