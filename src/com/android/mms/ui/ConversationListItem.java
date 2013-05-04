@@ -211,7 +211,7 @@ public class ConversationListItem extends RelativeLayout implements Contact.Upda
         
         //Location
         if(mContext.getResources().getConfiguration().locale.getCountry().equals("CN")||mContext.getResources().getConfiguration().locale.getCountry().equals("TW")) {
-        	mLocationView.setText(PhoneLocation.getCityFromPhone(contacts.get(0).getNumber(), context));
+        	mLocationView.setText(PhoneLocation.getCityFromPhone(contacts.get(0).getNumber()));
         }
 
         if (Log.isLoggable(LogTag.CONTACT, Log.DEBUG)) {
