@@ -2165,9 +2165,6 @@ public class ComposeMessageActivity extends Activity
 
         updateSendButtonState();
 
-        // strip unicode for counting characters
-        s = stripUnicodeIfRequested(s);
-
         drawTopPanel(false);
         if (!mShouldLoadDraft) {
             // We're not loading a draft, so we can draw the bottom panel immediately.
