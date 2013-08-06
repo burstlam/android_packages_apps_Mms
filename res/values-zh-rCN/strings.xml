@@ -492,8 +492,5 @@
     <string name="msg_sig_summary">设置一条自定义的短信小尾巴</string>
     <string name="msg_sig_enter_text">请输入小尾巴的文本</string>
 
-    <string name="pref_title_mms_user_agent">用户标识</string>
-    <string name="pref_summary_mms_user_agent">改变发送短信时的手机标识</string>
-    <string name="pref_mms_user_agent_custom_set">标识设置为:\n</string>
 
 </resources>
