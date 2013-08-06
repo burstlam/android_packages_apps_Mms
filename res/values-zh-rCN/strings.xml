@@ -441,4 +441,52 @@
     <string name="delay_send_duration_options_entry_4">60 秒</string>
     <string name="remaining_delay_time">该消息将在 &lt;font color="red"&gt;&lt;big&gt;%1$d&lt;/big&gt;&lt;/font&gt; 秒后发送</string>
     <string name="sent_countdown">短信发送倒计时</string>
+
+
+    <!-- Multi Contact selector -->
+    <string name="pref_multi_select">短信群发</string>
+    <string name="pref_multi_select_summary">使用选择框选择多个收件人</string>
+    <string name="add_recipients">添加收件人</string>
+    <string name="groups_header">分组</string>
+    <string name="loading_recipients">正在读取联系人和分组</string>
+    <string name="no_recipients">没有可选收件人</string>
+
+    <!-- Multi-Part SMS -->
+    <string name="pref_title_sms_multi_part">多部分短信</string>
+    <string name="pref_title_sms_multi_part_size">多部分短信大小</string>
+    <string name="pref_summary_sms_multi_part_mms">160字符以上的短信将以彩信发送</string>
+    <string name="pref_summary_sms_multi_part">160字符以上的短信将被发送为分割为多部分发送</string>
+    <string name="pref_summary_sms_multi_part_mms_size"> <xliff:g id="seg">%1$s</xliff:g> 字符以上的短信将被转换为彩信发送</string>
+
+    <!-- Split SMS -->
+    <string name="pref_title_sms_split">分割短信</string>
+    <string name="pref_summary_sms_split">超过160字的短信将被分割为160字</string>
+
+    <!-- Mms Breath -->
+    <string name="mms_breath">短信呼吸灯</string>
+    <string name="mms_breath_summary">短信通知时开启呼吸灯</string>
+
+    <string name="pref_char_settings">文本设置</string>
+
+    <!-- Avatar -->
+    <string name="hide_avatar">隐藏头像</string>
+    <string name="hide_avatar_summary">在对话列表屏幕隐藏头像</string>
+
+    <!-- Message signature -->
+    <string name="msg_sig_title">签名</string>
+    <string name="msg_sig_summary">为短信设置自定义签名</string>
+    <string name="msg_sig_enter_text">输入签名文本</string>
+
+    <string name="pref_title_mms_user_agent">用户标识</string>
+    <string name="pref_summary_mms_user_agent">改变发送短信时的手机标识</string>
+    <string name="pref_mms_user_agent_custom_set">标识设置为:\n</string>
+
+    <!-- Setting item for folder to save MMS Attachments to -->
+    <string name="pref_title_save_location">附件存储路径</string>
+    <string name="pref_title_save_location_summary">自定义存储附件的文件夹</string>
+
+    <!-- Text area -->
+    <string name="pref_text_area_size_title">文本区域大小</string>
+    <string name="pref_text_area_size_summary">设置文本区域大小为 <xliff:g id="lines">%1$s</xliff:g> 行</string>
+
 </resources>
