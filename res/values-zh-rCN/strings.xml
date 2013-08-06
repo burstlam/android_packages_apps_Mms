@@ -496,8 +496,4 @@
     <string name="pref_summary_mms_user_agent">改变发送短信时的手机标识</string>
     <string name="pref_mms_user_agent_custom_set">标识设置为:\n</string>
 
-    <!-- Setting item for folder to save MMS Attachments to -->
-    <string name="pref_title_save_location">附件存储路径</string>
-    <string name="pref_title_save_location_summary">自定义存储附件的文件夹</string>
-
 </resources>
