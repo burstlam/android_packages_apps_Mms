@@ -491,6 +491,4 @@
     <string name="msg_sig_title">短信小尾巴</string>
     <string name="msg_sig_summary">设置一条自定义的短信小尾巴</string>
     <string name="msg_sig_enter_text">请输入小尾巴的文本</string>
-
-
 </resources>
