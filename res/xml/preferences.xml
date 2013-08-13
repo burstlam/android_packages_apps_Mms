@@ -130,6 +130,12 @@
     <PreferenceCategory android:title="@string/pref_sms_settings_title"
         android:key="pref_key_sms_settings" >
 
+        <CheckBoxPreference
+            android:key="new_sms_wakelock"
+            android:title="@string/pref_title_wake_screen_on_incoming_sms"
+            android:summary="@string/pref_summary_wake_screen_on_incoming_sms"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="pref_key_send_delay"
             android:persistent="true"
