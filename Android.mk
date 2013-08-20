@@ -1,6 +1,15 @@
 # Copyright 2007-2008 The Android Open Source Project
 
 LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+	src/com/android/mms/util/HanziToPinyin.java
+
+LOCAL_MODULE := com.android.HanziToPinyin
+include $(BUILD_STATIC_JAVA_LIBRARY)
+
 include $(CLEAR_VARS)
 # Include res dir from chips
 chips_dir := ../../../frameworks/ex/chips/res
