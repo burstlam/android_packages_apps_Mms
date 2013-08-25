@@ -491,4 +491,24 @@
     <string name="msg_sig_title">短信小尾巴</string>
     <string name="msg_sig_summary">设置一条自定义的短信小尾巴</string>
     <string name="msg_sig_enter_text">请输入小尾巴的文本</string>
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">黑名单</string>
+    <string name="blacklist_summary_disabled">已禁用</string>
+    <string name="blacklist_summary">在黑名单目录中的号码发送来的短信将会被屏蔽</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_notification">阻止了一条由 %s 发送的短信</string>
+    <string name="blacklist_notification_private_number">阻止了一条来自私人号码的短信</string>
+    <string name="blacklist_notification_list_private">私人</string>
+    <string name="blacklist_notification_unknown_number">阻止了一条由陌生号码 %s 发送的短信</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> 条短信已被屏蔽</string>
+    <string name="unblock_number">解除屏蔽</string>
+
+    <!-- Blacklist management -->
+    <string name="add_to_blacklist">添加到黑名单中</string>
+    <string name="add_to_blacklist_message">未来由 %s 发送的所有短信都会被屏蔽</string>
+
+    <!-- Generic blacklist handling -->
+    <string name="alert_dialog_yes">是</string>
+    <string name="alert_dialog_no">否</string>
 </resources>
