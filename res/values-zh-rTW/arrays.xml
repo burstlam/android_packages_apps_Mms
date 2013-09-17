@@ -44,4 +44,27 @@
   <string-array name="empty_subject_strings">
     <item msgid="7691141505407124426">"無主旨"</item>
   </string-array>
+  <string-array name="pref_templates_gestures_sensitivity_entries">
+    <item>1 (最寬松)</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12 (最嚴謹)</item>
+  </string-array>
+
+  <string-array name="pref_mms_notification_vibrate_pattern_entries">
+    <item>正常</item>
+    <item>中等震動</item>
+    <item>長期震動</item>
+    <item>多次震動 (短促)</item>
+    <item>多次震動 (長期)</item>
+    <item>@string/pref_title_mms_notification_vibrate_custom</item>
+  </string-array>
 </resources>
