@@ -22,6 +22,8 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.mokee.location.PhoneLocation;
+import android.mokee.util.MoKeeUtils;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
@@ -56,6 +58,7 @@ public class ConversationListItem extends RelativeLayout implements Contact.Upda
     private TextView mSubjectView;
     private TextView mFromView;
     private TextView mDateView;
+    private TextView mLocationView;
     private View mAttachmentView;
     private View mErrorIndicator;
     private QuickContactBadge mAvatarView;
@@ -93,6 +96,7 @@ public class ConversationListItem extends RelativeLayout implements Contact.Upda
         mSubjectView = (TextView) findViewById(R.id.subject);
 
         mDateView = (TextView) findViewById(R.id.date);
+        mLocationView = (TextView) findViewById(R.id.location);
         mAttachmentView = findViewById(R.id.attachment);
         mErrorIndicator = findViewById(R.id.error);
         mAvatarView = (QuickContactBadge) findViewById(R.id.avatar);
@@ -219,6 +223,11 @@ public class ConversationListItem extends RelativeLayout implements Contact.Upda
 
         // Register for updates in changes of any of the contacts in this conversation.
         ContactList contacts = conversation.getRecipients();
+
+        //Location
+        if (MoKeeUtils.isChineseLanguage()) {
+        	mLocationView.setText(PhoneLocation.getCityFromPhone(contacts.get(0).getNumber()));
+        }
 
         if (Log.isLoggable(LogTag.CONTACT, Log.DEBUG)) {
             Log.v(TAG, "bind: contacts.addListeners " + this);
