@@ -324,6 +324,12 @@
             android:summary="@string/direct_call_summary"/>
 
         <CheckBoxPreference
+            android:key="pref_key_speech_bubbles"
+            android:title="@string/pref_title_speech_bubbles"
+            android:summary="@string/pref_summary_speech_bubbles"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
             android:key="pref_hide_avatar"
             android:title="@string/hide_avatar"
             android:summary="@string/hide_avatar_summary"

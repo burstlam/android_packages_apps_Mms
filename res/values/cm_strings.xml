@@ -25,4 +25,8 @@
     <string name="send_delay_30seconds">30 seconds</string>
     <string name="sent_countdown">Message delivery countdown</string>
 
+    <!-- Speech bubbles -->
+    <string name="pref_title_speech_bubbles">Speech bubbles</string>
+    <string name="pref_summary_speech_bubbles">Use speech bubbles theme</string>
+
 </resources>

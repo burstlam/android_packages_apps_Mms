@@ -79,10 +79,13 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     public static final String MSG_SIGNATURE            = "pref_msg_signature";
     public static final String MMS_BREATH               = "mms_breath";
 
+    // Speech bubbles
+    public static final String SPEECH_BUBBLES           = "pref_key_speech_bubbles";
+
     // Emoji
-    public static final String ENABLE_EMOJIS             = "pref_key_enable_emojis";
-    public static final String ENABLE_QUICK_EMOJIS       = "pref_key_enable_quick_emojis";
-    public static final String SOFTBANK_EMOJIS           = "pref_key_enable_softbank_encoding";
+    public static final String ENABLE_EMOJIS            = "pref_key_enable_emojis";
+    public static final String ENABLE_QUICK_EMOJIS      = "pref_key_enable_quick_emojis";
+    public static final String SOFTBANK_EMOJIS          = "pref_key_enable_softbank_encoding";
 
     // Unicode
     public static final String UNICODE_STRIPPING            = "pref_key_unicode_stripping";
