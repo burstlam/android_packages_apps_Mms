@@ -4846,6 +4846,8 @@ public class ComposeMessageActivity extends Activity
                 int count = mMsgListView.getCount();
                 for (int i = 0; i < count; i++) {
                     MessageListItem v = (MessageListItem) mMsgListView.getChildAt(i);
+                    if (v == null)
+                        break;
                     MessageItem listItem = v.getMessageItem();
                     if (item.equals(listItem)) {
                         v.updateDelayCountDown();
