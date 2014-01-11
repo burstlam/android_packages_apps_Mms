@@ -233,4 +233,10 @@
     <string name="alert_dialog_yes">是</string>
     <string name="alert_dialog_no">否</string>
 
+    <!-- Speech bubbles -->
+    <string name="pref_title_speech_bubbles">氣泡對話</string>
+    <string name="pref_summary_speech_bubbles">使用氣泡對話主題</string>
+    <string name="pref_title_no_avatars">隱藏聯絡人頭像</string>
+    <string name="pref_summary_no_avatars">使用氣泡主題時隱藏聯絡人頭像</string>
+
 </resources>
