@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2014 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Start of adding custom theme'n aspects to Mms
+         Much thanks to @DroidJunk (jimmy miller) for the guide -->
+    <!-- MMS THEME SETTINGS -->
+    <string name="mms_themes">Mms 主题设定</string>
+    <string name="themes_summary">改变信息软件外观</string>
+    <string name="themes_conv_list_title">信息列风格</string>
+    <string name="themes_conv_list_summary">改变信息列风格，设定文字内容颜色</string>
+    <string name="themes_msg_list_title">对话视窗风格</string>
+    <string name="themes_msg_list_summary">改变对话视窗风格，设定文字内容颜色</string>
+    <string name="themes_widget_title">小部件主题</string>
+    <string name="themes_widget_summary">桌面小部件套用深／浅色风格, 设定文字内容颜色</string>
+    <string name="background_colors">背景</string>
+    <string name="restore_defaults">还原系统默认设定</string>
+    <string name="delete_custom_image">删除背景图片</string>
+    <string name="custom_image_title">自定义图片</string>
+    <string name="custom_image_summary">套用自定义图片到背景</string>
+    <!-- Themes preference categorys -->
+    <string name="main_bg">主页面背景</string>
+    <string name="font_sizes_title">字型大小</string>
+    <string name="bubble_style_title">气泡风格</string>
+    <string name="recv_text_header">接收</string>
+    <string name="sent_text_header">寄出</string>
+    <string name="show_contact_avatar">显示联络人头像</string>
+    <string name="text_conv_layout">对话内容布局风格</string>
+    <string name="contact_font_size_title">联络人 = </string>
+    <string name="font_size_title">信息 = </string>
+    <string name="date_font_size_title">日期 = </string>
+    <string name="conversation_list_unread">未读取信息</string>
+    <string name="conversation_list_read">已读取信息</string>
+    <!-- Conversation layout styles -->
+    <string name="layout_default">默认布局</string>
+    <string name="layout_from_left">自左方开始</string>
+    <string name="layout_from_right">自右方开始</string>
+    <!-- add signature -->
+    <string name="add_signature_title">新增信息署名</string>
+    <string name="add_signature_summary">信息加入自定义信息署名</string>
+    <string name="enter_text">输入文字</string>
+    <!-- conv list colors -->
+    <string name="background">背景</string>
+    <string name="contact">联络人</string>
+    <string name="subject">主题</string>
+    <string name="date">日期</string>
+    <string name="message_count">分页数</string>
+    <!-- bubbles -->
+    <string name="text_bubble_title">设定气泡样式</string>
+    <string name="bubble_fill_parent_title">气泡填满屏幕宽度</string>
+    <string name="bubble">套用气泡</string>
+    <string name="bubble_none">没有气泡</string>
+    <string name="rect">方型</string>
+    <string name="rect_holo">圆角方型</string>
+    <string name="circle">圆型</string>
+    <string name="circle_holo">圆角环型</string>
+    <string name="frame_arrow">信息框带箭头及框线</string>
+    <string name="frame_outer_only">信息框线连背景</string>
+    <string name="frame">仅信息框</string>
+    <!-- Contact use -->
+    <string name="show_contact_name">显示联络人名称</string>
+    <!-- Sent colors -->
+    <string name="message_background">背景</string>
+    <string name="contact_color">连络人</string>
+    <string name="text_color">信息</string>
+    <string name="date_color">日期</string>
+    <!-- widgets -->
+    <string name="widget_layout_dark">深色</string>
+    <string name="widget_layout_light">浅色</string>
+    <string name="widget_layout">小部件风格</string>
+    <string name="widget_read">已读取颜色</string>
+    <string name="widget_unread">未读取颜色</string>
+    <string name="widget_senders_text_color">寄出者文字</string>
+    <string name="widget_subject_text_color">主题文字</string>
+    <string name="widget_date_text_color">日期文字</string>
+
+</resources>
