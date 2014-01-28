@@ -292,6 +292,11 @@ public class MessageListItem extends LinearLayout implements
         boolean mSpeechBubbles = prefs.getBoolean(MessagingPreferenceActivity.SPEECH_BUBBLES, false);
         boolean mNoAvatars = prefs.getBoolean(MessagingPreferenceActivity.NO_AVATARS, false);
 
+        Drawable defaultContactImage =
+                mContext.getResources().getDrawable(R.drawable.ic_contact_picture);
+        if (!sDefaultContactImage.getConstantState().equals(defaultContactImage)) {
+            sDefaultContactImage = defaultContactImage;
+        }
         Drawable avatarDrawable;
         if (isSelf || !TextUtils.isEmpty(addr)) {
             Contact contact = isSelf ? Contact.getMe(false) : Contact.get(addr, false);
