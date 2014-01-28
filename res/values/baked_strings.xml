@@ -86,4 +86,8 @@
     <string name="widget_subject_text_color">Subject text</string>
     <string name="widget_date_text_color">Date text</string>
 
+    <!-- Direct Call -->
+    <string name="direct_call_title">Direct Call</string>
+    <string name="direct_call_summary">Picking up the phone calls the current contact</string>
+
 </resources>
