@@ -87,4 +87,34 @@
     <string name="widget_subject_text_color">主題文字</string>
     <string name="widget_date_text_color">日期文字</string>
 
+    <!-- Enable emojis -->
+    <string name="pref_title_enable_emojis">繪文字支持</string>
+    <string name="pref_summary_enable_emojis">開啟繪文字 (一套471個視覺情感符號) 的支持</string>
+
+    <!-- Emoji Menu item -->
+    <string name="menu_insert_smiley">插入表情符號</string>
+    <string name="menu_insert_emoji">插入繪文字</string>
+
+    <!-- Enable quick emojis -->
+    <string name="pref_title_enable_quick_emojis">快速繪文字按鈕</string>
+    <string name="pref_summary_enable_quick_emojis">在輸入框左側顯示一個快速訪問繪文字的按鈕</string>
+
+    <!-- Enable SoftBank emoji encoding -->
+    <string name="pref_title_enable_softbank_encoding">SoftBank 繪文字</string>
+    <string name="pref_summary_enable_softbank_encoding">使用 SoftBank 繪文字編碼</string>
+
+    <!-- Breathing Notifications -->
+    <string name="sms_breath">SMS 呼吸圖示通知</string>
+    <string name="sms_breath_summary">於狀態欄顯示呼吸圖示通知.</string>
+
+    <!-- MMS push permission -->
+    <string name="label_mms_push">彩信推送</string>
+    <string name="desc_mms_push">將彩信從發件箱推送到移動網絡</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_ua_default_android">Android默認</string>
+    <string name="pref_mms_ua_custom_option">自定義\u2026</string>
+    <string name="pref_title_mms_user_agent">自定義使用者代理</string>
+    <string name="pref_summary_mms_user_agent">偽裝成其他裝置發送 MMS</string>
+    <string name="pref_mms_user_agent_custom_set">使用者代理設定為:\n</string>
 </resources>
