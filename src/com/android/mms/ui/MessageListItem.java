@@ -82,6 +82,8 @@ import com.android.mms.transaction.TransactionBundle;
 import com.android.mms.transaction.TransactionService;
 import com.android.mms.util.DownloadManager;
 import com.android.mms.util.ItemLoadedCallback;
+import com.android.mms.util.EmojiParser;
+import com.android.mms.util.SmileyParser;
 import com.android.mms.util.ThumbnailManager.ImageLoaded;
 import com.google.android.mms.ContentType;
 import com.google.android.mms.pdu.PduHeaders;
@@ -687,7 +689,7 @@ public class MessageListItem extends LinearLayout implements
     TextAppearanceSpan mTextSmallSpan =
         new TextAppearanceSpan(mContext, android.R.style.TextAppearance_Small);
 
-    ForegroundColorSpan mColorSpan = null;  // set in ctor
+    ForegroundColorSpan mColorSpan = null; // set in ctor
 
     private CharSequence formatMessage(MessageItem msgItem, String contact, String body,
                                        String subject, Pattern highlight,
@@ -716,9 +718,23 @@ public class MessageListItem extends LinearLayout implements
             buf.setSpan(new ForegroundColorSpan(mColor), 0, contactLength, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }
 
+        SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences(mContext);
+        boolean enableEmojis = prefs.getBoolean(MessagingPreferenceActivity.ENABLE_EMOJIS, false);
+
         boolean hasSubject = !TextUtils.isEmpty(subject);
+        SmileyParser parser = SmileyParser.getInstance();
         if (hasSubject) {
-            buf.append(res.getString(R.string.inline_subject, subject));
+            CharSequence smilizedSubject = parser.addSmileySpans(subject);
+            if (enableEmojis) {
+                EmojiParser emojiParser = EmojiParser.getInstance();
+                smilizedSubject = emojiParser.addEmojiSpans(smilizedSubject);
+            }
+            // Can't use the normal getString() with extra arguments for string replacement
+            // because it doesn't preserve the SpannableText returned by addSmileySpans.
+            // We have to manually replace the %s with our text.
+            buf.append(TextUtils.replace(mContext.getResources().getString(R.string.inline_subject),
+                    new String[] { "%s" }, new CharSequence[] { smilizedSubject }));
         }
 
         if (!TextUtils.isEmpty(body)) {
@@ -730,7 +746,12 @@ public class MessageListItem extends LinearLayout implements
                 if (hasSubject) {
                     buf.append("\n");
                 }
-                buf.append(body);
+                CharSequence smileyBody = parser.addSmileySpans(body);
+                if (enableEmojis) {
+                    EmojiParser emojiParser = EmojiParser.getInstance();
+                    smileyBody = emojiParser.addEmojiSpans(smileyBody);
+                }
+                buf.append(smileyBody);
             }
         }
 

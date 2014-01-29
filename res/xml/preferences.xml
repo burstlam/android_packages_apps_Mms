@@ -67,6 +67,28 @@
                 android:targetPackage="com.android.mms" />
         </Preference>
 
+        <CheckBoxPreference
+            android:key="pref_key_enable_emojis"
+            android:title="@string/pref_title_enable_emojis"
+            android:summary="@string/pref_summary_enable_emojis"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="pref_key_enable_quick_emojis"
+            android:title="@string/pref_title_enable_quick_emojis"
+            android:summary="@string/pref_summary_enable_quick_emojis"
+            android:layout="?android:attr/preferenceLayoutChild"
+            android:dependency="pref_key_enable_emojis"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="pref_key_enable_softbank_encoding"
+            android:title="@string/pref_title_enable_softbank_encoding"
+            android:summary="@string/pref_summary_enable_softbank_encoding"
+            android:layout="?android:attr/preferenceLayoutChild"
+            android:dependency="pref_key_enable_emojis"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -314,4 +336,5 @@
             android:dialogTitle="@string/pref_title_mms_user_agent" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>
