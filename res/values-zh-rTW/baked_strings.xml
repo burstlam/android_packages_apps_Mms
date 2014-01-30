@@ -111,6 +111,10 @@
     <string name="label_mms_push">彩信推送</string>
     <string name="desc_mms_push">將彩信從發件箱推送到移動網絡</string>
 
+    <!-- Direct Call -->
+    <string name="direct_call_title">體感撥號</string>
+    <string name="direct_call_summary">手機放在耳邊時將撥打當前短信聯絡人的電話</string>
+
     <!-- Custom user-agent -->
     <string name="pref_mms_ua_default_android">Android默認</string>
     <string name="pref_mms_ua_custom_option">自定義\u2026</string>

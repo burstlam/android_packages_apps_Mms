@@ -107,6 +107,10 @@
     <string name="sms_breath">SMS 呼吸图示通知</string>
     <string name="sms_breath_summary">于状态栏显示呼吸图示通知.</string>
 
+    <!-- Direct Call -->
+    <string name="direct_call_title">体感拨号</string>
+    <string name="direct_call_summary">手机放在耳边时将拨打当前短信联系者的电话</string>
+
     <!-- MMS push permission -->
     <string name="label_mms_push">彩信推送</string>
     <string name="desc_mms_push">将彩信从发件箱推送到移动网络</string>

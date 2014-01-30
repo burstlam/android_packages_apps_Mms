@@ -67,6 +67,12 @@
                 android:targetPackage="com.android.mms" />
         </Preference>
 
+        <ListPreference
+            android:key="pref_key_unicode_stripping"
+            android:title="@string/pref_title_unicode_stripping"
+            android:entries="@array/pref_unicode_stripping_entries"
+            android:entryValues="@array/pref_unicode_stripping_values" />
+
         <CheckBoxPreference
             android:key="pref_key_enable_emojis"
             android:title="@string/pref_title_enable_emojis"
@@ -205,6 +211,10 @@
             android:title="@string/pref_title_notification_privacy_mode_enabled"
             android:summary="@string/pref_summary_notification_privacy_mode_enabled" />
 
+        <CheckBoxPreference android:key="pref_key_sms_breath"
+            android:title="@string/sms_breath"
+            android:summary="@string/sms_breath_summary"
+            android:defaultValue="false" />
 
         <RingtonePreference
             android:key="pref_key_ringtone"
@@ -217,11 +227,6 @@
             android:key="pref_key_vibrate"
             android:title="@string/pref_title_notification_vibrateWhen"
             android:dependency="pref_key_enable_notifications"
-            android:defaultValue="false" />
-
-        <CheckBoxPreference android:key="pref_key_sms_breath"
-            android:title="@string/sms_breath"
-            android:summary="@string/sms_breath_summary"
             android:defaultValue="false" />
 
         <ListPreference
@@ -306,12 +311,6 @@
                 android:targetPackage="com.android.settings"
                 android:targetClass="com.android.settings.Settings$BlacklistSettingsActivity" />
         </PreferenceScreen>
-
-        <ListPreference
-            android:key="pref_key_unicode_stripping"
-            android:title="@string/pref_title_unicode_stripping"
-            android:entries="@array/pref_unicode_stripping_entries"
-            android:entryValues="@array/pref_unicode_stripping_values" />
 
         <CheckBoxPreference
             android:key="pref_key_mms_full_timestamp"
