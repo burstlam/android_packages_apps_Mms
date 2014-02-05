@@ -56,7 +56,7 @@
                 android:maxLines="2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/qm_dark_text"
-                android:textColorLink="?android:attr/textColorPrimary" />
+                android:textColorLink="@color/qm_holo_blue_light" />
 
             <TextView
                 android:id="@+id/timestampTextView"
