@@ -16,29 +16,29 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Color of the text for buttons in the action bar  -->
-    <color name="action_bar_button_text_color">#ffefefef</color>
+    <!-- Color of the text for buttons in the action bar -->
+    <color name="action_bar_button_text_color">#FFFFFF</color>
 
     <!-- New text colors from layouts to make theme chooser apk easier to theme -->
-    <color name="compose_message_edit_text">#ffffffff</color>
-    <color name="compose_message_text_counter">#ccefefef</color>
-    <color name="actionbar_text">#ffdddddd</color>
-    <color name="delete_thread_dialog">#ffcccccc</color>
-    <color name="delivery_report_header">#ffeeeeee</color>
-    <color name="delivery_report_recipient">#ffffffff</color>
-    <color name="delivery_report_status">#ffcccccc</color>
-    <color name="delivery_report_date">#ffcccccc</color>
+    <color name="compose_message_edit_text">#ff000000</color>
+    <color name="compose_message_text_counter">#cc333333</color>
+    <color name="actionbar_text">#ccffffff</color>
+    <color name="delete_thread_dialog">#ff000000</color>
+    <color name="delivery_report_header">#ffffffff</color>
+    <color name="delivery_report_recipient">#ff000000</color>
+    <color name="delivery_report_status">#ff000000</color>
+    <color name="delivery_report_date">#ff000000</color>
     <color name="button_text">#ffffffff</color>
-    <color name="message_received">#ffffffff</color>
-    <color name="message_sent">#ffffffff</color>
-    <color name="widget_unread_text">#ffdddddd</color>
-    <color name="widget_unread_text_light">#ff202020</color>
-    <color name="widget_loading">#ffffffff</color>
+    <color name="message_received">#ff000000</color>
+    <color name="message_sent">#ff000000</color>
+    <color name="widget_unread_text">#ff000000</color>
+    <color name="widget_unread_text_light">#ff777777</color>
+    <color name="widget_loading">#ff000000</color>
 
     <!-- New Background colors from layouts to make theme chooser apk easier to theme -->
-    <color name="background">#ff000000</color>
-    <color name="darkgray_backgrounds">#ff111111</color>
-    <color name="dividers">#ff202020</color>
+    <color name="background">#ffffffff</color>
+    <color name="darkgray_backgrounds">#ff888888</color>
+    <color name="dividers">#ffeeeeee</color>
     <color name="transparent">#00000000</color>
     <color name="semi_transparent">#6f000000</color>
 
@@ -50,7 +50,7 @@
     <color name="qm_dark_bg">#ff020202</color>
     <color name="qm_dark_text">#ffefefef</color>
     <color name="qm_dark_text_fade">#ffafafaf</color>
-    <color name="quickmessage_body_dark_bg">#ff010101</color>
+    <color name="quickmessage_body_dark_bg">#ff1e1e1e</color>
     <color name="quickmessage_body_light_bg">#fff3f3f3</color>
 
     <!-- widget background colors for unread/read -->
@@ -61,52 +61,52 @@
 
     <!-- Theme defaults -->
     <!-- == Conversation list default colors == -->
-    <color name="default_conv_list_background">#30000000</color>
+    <color name="default_conv_list_background">#ffffffff</color>
     <!-- Read defaults -->
-    <color name="default_read_bg">#60000000</color>
-    <color name="default_read_contact">#ffffffff</color>
-    <color name="default_read_subject">#ffefefef</color>
-    <color name="default_read_date">#ffcfcfcf</color>
-    <color name="default_read_count">#ffafafaf</color>
+    <color name="default_read_bg">#7dc5d592</color>
+    <color name="default_read_contact">#ff000000</color>
+    <color name="default_read_subject">#ff000000</color>
+    <color name="default_read_date">#ff000000</color>
+    <color name="default_read_count">#ffff0000</color>
     <!-- Unread defaults -->
-    <color name="default_unread_bg">#90afafaf</color>
-    <color name="default_unread_contact">#ff101010</color>
-    <color name="default_unread_subject">#ff1f1f1f</color>
-    <color name="default_unread_date">#ff242424</color>
-    <color name="default_unread_count">#ff303030</color>
+    <color name="default_unread_bg">#7d92d3fc</color>
+    <color name="default_unread_contact">#ff000000</color>
+    <color name="default_unread_subject">#ff000000</color>
+    <color name="default_unread_date">#ff000000</color>
+    <color name="default_unread_count">#ffff0000</color>
 
     <!-- == Messages list view default colors == -->
-    <color name="default_message_background">#00000000</color>
+    <color name="default_message_background">#ffffffff</color>
     <!-- Read defaults -->
-    <color name="default_recv_text_bg">#85afafaf</color>
-    <color name="default_recv_contact_color">#ffffffff</color>
-    <color name="default_recv_textcolor">#ffefefef</color>
-    <color name="default_recv_datecolor">#ffcfcfcf</color>
+    <color name="default_recv_text_bg">#7d92d3fc</color>
+    <color name="default_recv_contact_color">#ff000000</color>
+    <color name="default_recv_textcolor">#ff000000</color>
+    <color name="default_recv_datecolor">#ff000000</color>
     <!-- Unread defaults -->
-    <color name="default_sent_text_bg">#85afafaf</color>
-    <color name="default_sent_contact_color">#ffffffff</color>
-    <color name="default_sent_textcolor">#ffefefef</color>
-    <color name="default_sent_datecolor">#ffcfcfcf</color>
+    <color name="default_sent_text_bg">#7dc5d592</color>
+    <color name="default_sent_contact_color">#ff000000</color>
+    <color name="default_sent_textcolor">#ff000000</color>
+    <color name="default_sent_datecolor">#ff000000</color>
 
     <!-- == Widget default colors == -->
     <!-- widget dark -->
     <!-- read -->
-    <color name="widget_senders_textcolor_read">#ffdfdfdf</color>
-    <color name="widget_subject_textcolor_read">#ffbfbfbf</color>
-    <color name="widget_date_textcolor_read">#ff9f9f9f</color>
+    <color name="widget_senders_textcolor_read">#ffffffff</color>
+    <color name="widget_subject_textcolor_read">#ffffffff</color>
+    <color name="widget_date_textcolor_read">#ffffffff</color>
     <!-- unread -->
-    <color name="widget_senders_textcolor_unread">#ffefefef</color>
-    <color name="widget_subject_textcolor_unread">#ffcfcfcf</color>
-    <color name="widget_date_textcolor_unread">#ffbfbfbf</color>
+    <color name="widget_senders_textcolor_unread">#ffffffff</color>
+    <color name="widget_subject_textcolor_unread">#ffffffff</color>
+    <color name="widget_date_textcolor_unread">#ffffffff</color>
 
     <!-- widget light -->
     <!-- read -->
-    <color name="widget_light_senders_textcolor_read">#ff141414</color>
-    <color name="widget_light_subject_textcolor_read">#ff1f1f1f</color>
-    <color name="widget_light_date_textcolor_read">#ff252525</color>
+    <color name="widget_light_senders_textcolor_read">#ff000000</color>
+    <color name="widget_light_subject_textcolor_read">#ff000000</color>
+    <color name="widget_light_date_textcolor_read">#ff000000</color>
     <!-- unread -->
     <color name="widget_light_senders_textcolor_unread">#ff000000</color>
-    <color name="widget_light_subject_textcolor_unread">#ff080808</color>
-    <color name="widget_light_date_textcolor_unread">#ff141414</color>
+    <color name="widget_light_subject_textcolor_unread">#ff000000</color>
+    <color name="widget_light_date_textcolor_unread">#ff000000</color>
 
 </resources>
