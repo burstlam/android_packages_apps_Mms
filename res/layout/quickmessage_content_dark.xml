@@ -91,7 +91,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16sp"
             android:textColor="@color/qm_dark_text"
-            android:textColorLink="@color/qm_holo_blue_light" />
+            android:textColorLink="?android:attr/textColorPrimary" />
     </ScrollView>
 
     <!-- 'Tap to reply' editor, character counter and send button -->
