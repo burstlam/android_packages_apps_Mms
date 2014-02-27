@@ -2221,7 +2221,7 @@ public class ComposeMessageActivity extends Activity
 
     private void registerSensorListener(Sensor sensor) {
         if (sensor != null)
-            mSensorManager.registerListener(mSensorListener, sensor, SensorManager.SENSOR_DELAY_UI);
+            mSensorManager.registerListener(mSensorListener, sensor, SensorManager.SENSOR_DELAY_GAME);
     }
 
     private void unregisterSensorListener(Sensor sensor) {
@@ -2242,7 +2242,7 @@ public class ComposeMessageActivity extends Activity
                     SensorProximity = currentProx;
                     initProx = false;
                 } else {
-                    if( SensorProximity > 0 && currentProx <= 3){
+                    if( SensorProximity > 0 && currentProx <= 5){
                         proxChanged = true;
                     }
                 }
@@ -2257,12 +2257,12 @@ public class ComposeMessageActivity extends Activity
                 float I[] = new float[9];
                 boolean success = SensorManager.getRotationMatrix(R, I, mGravity, mGeomagnetic);
                 if (success) {
-                    float orientation[] = new float[3];
+                    float orientation[] = new float[5];
                     SensorManager.getOrientation(R, orientation);
                     SensorOrientationY = (int) (orientation[1] * 180f / Math.PI);
                 }
             }
-            if (rightOrientation(SensorOrientationY) && SensorProximity <= 3 && proxChanged ) {
+            if (rightOrientation(SensorOrientationY) && SensorProximity <= 5 && proxChanged ) {
                 if (getRecipients().isEmpty() == false) {
                     // unregister Listener to don't let the onSesorChanged run the
                     // whole time
