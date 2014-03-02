@@ -36,7 +36,7 @@
     <color name="widget_loading">#ffffffff</color>
 
     <!-- New Background colors from layouts to make theme chooser apk easier to theme -->
-    <color name="background">#ff000000</color>
+    <color name="background">#00000000</color>
     <color name="darkgray_backgrounds">#ff888888</color>
     <color name="dividers">#ffeeeeee</color>
     <color name="transparent">#00000000</color>
