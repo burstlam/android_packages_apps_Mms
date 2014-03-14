@@ -303,12 +303,6 @@
     <PreferenceCategory android:title="@string/pref_extra_settings"
         android:key="pref_key_extra_settings" >
 
-        <CheckBoxPreference
-            android:key="pref_key_mms_direct_call"
-            android:title="@string/direct_call_title"
-            android:summary="@string/direct_call_summary" 
-            android:defaultValue="false" />
-
         <PreferenceScreen
             android:key="pref_blacklist"
             android:title="@string/blacklist_title"

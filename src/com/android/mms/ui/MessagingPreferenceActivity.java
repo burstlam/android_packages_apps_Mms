@@ -121,9 +121,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     // Blacklist
     public static final String BLACKLIST                 = "pref_blacklist";
 
-    // Direct call
-    public static final String DIRECT_CALL              = "pref_key_mms_direct_call";
-
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS    = 1;
 
@@ -182,9 +179,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
 
     // Blacklist
     private PreferenceScreen mBlacklist;
-
-    // DirectCall
-    private CheckBoxPreference mDirectCall;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -262,7 +256,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mMmsReadReportPref = findPreference("pref_key_mms_read_reports");
         mMmsLimitPref = findPreference("pref_key_mms_delete_limit");
         mClearHistoryPref = findPreference("pref_key_mms_clear_history");
-        mDirectCall = (CheckBoxPreference) findPreference(DIRECT_CALL);
         mEnableNotificationsPref = (CheckBoxPreference) findPreference(NOTIFICATION_ENABLED);
         mMmsAutoRetrievialPref = (CheckBoxPreference) findPreference(AUTO_RETRIEVAL);
         mEnablePrivacyModePref = (CheckBoxPreference) findPreference(PRIVACY_MODE_ENABLED);
@@ -739,12 +732,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         boolean qmDarkThemeEnabled =
             prefs.getBoolean(MessagingPreferenceActivity.QM_DARK_THEME_ENABLED, false);
         return qmDarkThemeEnabled;
-    }
-
-    public static boolean getDirectCallEnabled(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean directCallEnabled = prefs.getBoolean(MessagingPreferenceActivity.DIRECT_CALL,false);
-        return directCallEnabled;
     }
 
     private void registerListeners() {
