@@ -92,4 +92,8 @@
 
     <!-- Failed to Attach Recorded Audio (SoundRecorder not found) -->
     <string name="record_sound_error_alert">Could not record audio.  SoundRecorder.apk is missing!</string>
+
+    <!-- Smart Call -->
+    <string name="direct_call_title">Direct Call</string>
+    <string name="direct_call_summary">Picking up the phone calls the current contact</string>
 </resources>

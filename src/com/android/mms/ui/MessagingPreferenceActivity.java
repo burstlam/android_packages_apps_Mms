@@ -121,6 +121,8 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     // Blacklist
     public static final String BLACKLIST                 = "pref_blacklist";
 
+    public static final String SMART_CALL = "pref_key_smart_call";
+
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS    = 1;
 
@@ -179,6 +181,8 @@ public class MessagingPreferenceActivity extends PreferenceActivity
 
     // Blacklist
     private PreferenceScreen mBlacklist;
+
+    private CheckBoxPreference mSmartCall;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -256,6 +260,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mMmsReadReportPref = findPreference("pref_key_mms_read_reports");
         mMmsLimitPref = findPreference("pref_key_mms_delete_limit");
         mClearHistoryPref = findPreference("pref_key_mms_clear_history");
+        mSmartCall = (CheckBoxPreference) findPreference(SMART_CALL);
         mEnableNotificationsPref = (CheckBoxPreference) findPreference(NOTIFICATION_ENABLED);
         mMmsAutoRetrievialPref = (CheckBoxPreference) findPreference(AUTO_RETRIEVAL);
         mEnablePrivacyModePref = (CheckBoxPreference) findPreference(PRIVACY_MODE_ENABLED);
@@ -732,6 +737,13 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         boolean qmDarkThemeEnabled =
             prefs.getBoolean(MessagingPreferenceActivity.QM_DARK_THEME_ENABLED, false);
         return qmDarkThemeEnabled;
+    }
+
+    public static boolean getSmartCallEnabled(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean smartCallEnabled =
+            prefs.getBoolean(MessagingPreferenceActivity.SMART_CALL,false);
+        return smartCallEnabled;
     }
 
     private void registerListeners() {
